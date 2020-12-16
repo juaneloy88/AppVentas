@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.FrmPedidoSugerido">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="txtRuta" Text="" Grid.Row="0" Grid.Column="0" />
+
+        <Label Text="version 1.0" Grid.Row="0" Grid.Column="2" />
+
+        <Label Text="CAPTURA DE INVENTARIO" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"/>
+
+        <!--grid para Mostrar la lista de Envase-->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="lsvArticulos" HasUnevenRows="False" Header="Header" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" ItemSelected="OnSelectionEnvase">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                            <Label Text="Clave" FontSize="Small" FontAttributes="Bold" WidthRequest="50"></Label>
+                            <Label Text="Promedio" FontSize="Small" FontAttributes="Bold" WidthRequest="100" HorizontalTextAlignment="End"></Label>
+                            <Label Text="Inventario" FontSize="Small" FontAttributes="Bold" WidthRequest="100" HorizontalTextAlignment="End"></Label>
+                            <Label Text="Sugerido" FontSize="Small" FontAttributes="Bold" WidthRequest="100" HorizontalTextAlignment="End"></Label>
+                         </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding arc_clave}" FontSize="Small" WidthRequest="70"></Label>
+                                <Label Text="{Binding pen_prm_cantidad}" FontSize="Small" WidthRequest="50" HorizontalTextAlignment="End"></Label>
+                                <Label Text="{Binding pen_inv_cantidad}" FontSize="Small" WidthRequest="100" HorizontalTextAlignment="End" ></Label>
+                                <Label Text="{Binding pen_sug_cantidad}" FontSize="Small" WidthRequest="50" HorizontalTextAlignment="End" ></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <!--grid para Mostrar la lista de Envase-->
+
+        <Button Text = "Regresar" Grid.Row="3" Grid.Column="0" Clicked="OnClickedRegresar" />
+        <Button Text = "Terminar" Grid.Row="3" Grid.Column="2" Clicked="OnClickedAvanzar" />
+
+    </Grid>
+</ContentPage>

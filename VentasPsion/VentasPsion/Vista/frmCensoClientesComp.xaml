@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmCensoClientesComp">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <TableView Intent="Settings" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HasUnevenRows="True" >
+            <TableRoot>
+                <TableSection Title="Censo Clientes Competencia">
+                    <ViewCell Height="65">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label Text="Nombre del cliente:" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center"/>
+                            <Entry x:Name="txtNombre" Grid.Row="1" Grid.Column="1" Keyboard="Text" Grid.ColumnSpan="3" FontSize="Small"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="65">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Nombre del Negocio:" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center"/>
+                            <Entry x:Name="txtNegocio" Grid.Row="1" Grid.Column="1" Keyboard="Text" Grid.ColumnSpan="3" FontSize="Small"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="45">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="¿Es cliente mixto?" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center"/>
+                            <Switch x:Name="sMixto" Grid.Row="0" Grid.Column="3" Margin="5" />
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="75">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Segmento" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center"/>
+                            <Picker x:Name="pckSegmento" Grid.Row="1" Grid.Column="1"  Grid.ColumnSpan="3" Title = "Segmento" />
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="65">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Ubicación" Grid.Row="1" Grid.Column="2" FontSize="Small" VerticalTextAlignment="Center"/>
+                            <Button Image="ic_geo"  Grid.Row="1" Grid.Column="3" HorizontalOptions="End" Clicked="OnClickEditarUbicacion"  VerticalOptions="Center" WidthRequest="50" HeightRequest="50" BorderRadius="25" />
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+                <TableSection Title="Acciones">
+                    <ViewCell Height="80">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="15"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="45"/>
+                            </Grid.RowDefinitions>
+                            <Button Text = "Regresar" Grid.Row="1" Grid.Column="1" Clicked="OnClickedRegresar"  />
+                            <Button Text = "Guardar" Grid.Row="1" Grid.Column="3" Clicked="OnClickedGuardar" HorizontalOptions="End"  />
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </Grid>
+    
+    
+    
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblRutaPlusTipoVenta" Text="Ruta " Grid.Row="0" Grid.Column="0" />
+        <Label x:Name="lblVersionApp" Text="version" Grid.Row="0" Grid.Column="2" />
+
+
+
+        --><!--grid para uso del desarrollador--><!--
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />  
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Censo Clientes Competencia"  Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="0" Grid.Column="0" />
+
+            <Label Text="Nombre del Cliente"    FontSize ="Medium" Grid.Row="1" Grid.Column="0" />
+            <Label Text=""                      FontSize ="Medium" Grid.Row="2" Grid.Column="0" />
+            <Label Text="Nombre del Negocio"    FontSize ="Medium" Grid.Row="3" Grid.Column="0" />
+            <Label Text=""                      FontSize ="Medium" Grid.Row="4" Grid.Column="0" />
+            <Label Text="Cliente Mixto"         FontSize ="Medium" Grid.Row="5" Grid.Column="0" />
+            
+            <Label Text=""                      FontSize ="Medium" Grid.Row="6" Grid.Column="0" />
+            <Label Text="Segmento"              FontSize ="Medium" Grid.Row="7" Grid.Column="0" />
+            <Label Text=""                      FontSize ="Medium" Grid.Row="8" Grid.Column="0" />
+            <Label Text="Localizacion"          FontSize ="Medium" Grid.Row="9" Grid.Column="0" />
+
+
+            <Entry x:Name="txtNombre"       Grid.Row="1" Grid.Column="1" Keyboard="Text"   />
+            
+            <Entry x:Name="txtNegocio"      Grid.Row="3" Grid.Column="1" Keyboard="Text"   />
+            
+            <Switch x:Name="sMixto"         Grid.Row="5" Grid.Column="1" />
+
+            <Picker x:Name="pckSegmento"    Grid.Row="7" Grid.Column="1" Title = "Segmento"  />
+
+            <Button Image="ic_edit_map"     Grid.Row="9" Grid.Column="1" HorizontalOptions="Center" Clicked="OnClickEditarUbicacion"  VerticalOptions="Center" WidthRequest="50" HeightRequest="50" BorderRadius="25" />
+
+        </Grid>
+        --><!--grid para uso del desarrollador--><!--
+
+        <Button Text = "Regresar" Grid.Row="2" Grid.Column="0" Clicked="OnClickedRegresar"  />
+
+        <Button Text = "Guardar" Grid.Row="2" Grid.Column="2" Clicked="OnClickedGuardar"  />
+
+    </Grid>-->
+</ContentPage>

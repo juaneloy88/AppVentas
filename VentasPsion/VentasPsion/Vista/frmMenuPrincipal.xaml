@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmMenuPrincipal">
+    <!--
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <Label Text="MENÚ PRINCIPAL" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnRecepcion"   Text="Recepción"        Clicked="OnClickedRecepcion"    Grid.Row="1" Grid.Column="1" />
+            <Button x:Name="btnInicioTurno" Text="Inicio de Turno"  Clicked="OnClickedInicioTurno"  Grid.Row="2" Grid.Column="1" />
+            <Button x:Name="btnOperaciones" Text="Operaciones"      Clicked="OnClickedOperaciones"  Grid.Row="3" Grid.Column="1" />
+            <Button x:Name="btnFinTurno"    Text="Fin de Turno"     Clicked="OnClickedFinTurno"     Grid.Row="4" Grid.Column="1" />
+            <Button x:Name="btnTransmision" Text="Transmisión"      Grid.Row="5" Grid.Column="1" />
+        </Grid>
+        
+        <Button Text="Regresar" Clicked="OnClickedRegresar" Grid.Row="3" Grid.Column="0" />
+    </Grid>
+    -->
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+
+
+            <ListView x:Name="listViewMenuPrincipal" HasUnevenRows="True" ItemSelected="OnClickMenuSeleccionado">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="60">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Button BackgroundColor="Transparent" Grid.Column="0"  InputTransparent="{Binding Habilitado}" IsVisible="{Binding Habilitado}" HorizontalOptions="Start" Image="{Binding Icon}"  Margin="5"/>
+                                <Label Grid.Column="1" Text="{Binding Opcion}" InputTransparent="{Binding Habilitado}" IsVisible="{Binding Habilitado}"  VerticalTextAlignment="Center" Margin="5"/>
+                                <Label Text="&#xf105;" Grid.Column="2"  FontSize="20" InputTransparent="{Binding Habilitado}" IsVisible="{Binding Habilitado}"  FontFamily="FontAwesome" HorizontalTextAlignment="End" Margin="10"/>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <!-- <ListView.Footer>
+                    <Button Text="Regresar" Clicked="OnClickedRegresar" HorizontalOptions="FillAndExpand" VerticalOptions="End" Margin="10"/>
+                </ListView.Footer> -->
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

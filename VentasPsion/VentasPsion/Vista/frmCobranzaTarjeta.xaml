@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           
+             x:Class="VentasPsion.Vista.frmCobranzaTarjeta">
+
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="400" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Ruta " Grid.Row="0" Grid.Column="0" />
+            <Label Text="version" Grid.Row="0" Grid.Column="2" />
+
+
+
+            <!--grid para uso del desarrollador-->
+            <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="43" />
+                    <RowDefinition Height="43" />
+
+                    <RowDefinition Height="43" />
+                    <RowDefinition Height="43" />
+                    <RowDefinition Height="43" />
+                    <RowDefinition Height="43" />
+                    <RowDefinition Height="43" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="COBRANZA"  Grid.ColumnSpan="4" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="0" Grid.Column="0" />
+
+                <Label  x:Name="lblTitulo" Text="TARJETA"  Grid.ColumnSpan="4" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="1" Grid.Column="0" />
+
+                <Label Text="MONTO"         FontSize ="Medium"  Grid.Row="3" Grid.Column="1" />
+                <Label Text="COMISION"      FontSize ="Medium"  Grid.Row="4" Grid.Column="1" IsVisible="False"/>
+                <Label Text="IMPORTE"       FontSize ="Medium"  Grid.Row="5" Grid.Column="1" />
+                <Label Text="AUTORIZACION"  FontSize ="Medium"  Grid.Row="6" Grid.Column="1" />
+
+                <Label Text="4 N° TARJETA"  FontSize ="Medium"  Grid.Row="7" Grid.Column="1" />
+                <Label Text="TIPO TARJETA"  FontSize ="Medium"  Grid.Row="8" Grid.Column="1"  />
+                <Label Text="FECHA APLICA"  FontSize ="Medium"  Grid.Row="9" Grid.Column="1" />
+
+                <Entry x:Name="txtMonto" Margin="1"  Keyboard="Numeric"    Grid.Row="3" Grid.Column="2"  IsEnabled="False"  />
+                <Entry x:Name="txtComision" Margin="1"  Keyboard="Numeric"    Grid.Row="4" Grid.Column="2"  TextChanged="txtComision_TextChanged" IsVisible="False"/>
+                <Entry x:Name="txtImporte" Margin="1"  Keyboard="Numeric"    Grid.Row="5" Grid.Column="2"  TextChanged="txtImporte_TextChanged"  />
+                <Entry x:Name="txtAutorizacion" Margin="1"  Keyboard="Numeric"    Grid.Row="6" Grid.Column="2"   />
+
+                <Entry x:Name="txtCuenta" Margin="1"  Keyboard="Numeric"    Grid.Row="7" Grid.Column="2"   />
+                <Picker x:Name="pckTipoTarjeta" Title = "Seleccione Tarjeta" Grid.Row="8" Grid.Column="2"  />
+                <Label x:Name="lblFecha"   FontSize ="Medium"  Grid.Row="9" Grid.Column="2" />
+
+            </Grid>
+            <!--grid para uso del desarrollador-->
+
+            <Button Text = "Regresar" Grid.Row="2" Grid.Column="0"  Clicked="OnClickedRegresar" />
+
+            <Button Text = "Aceptar" Grid.Row="2" Grid.Column="2" Clicked="OnClickedAceptar"/>
+
+        </Grid>
+      
+</ContentPage>
+    

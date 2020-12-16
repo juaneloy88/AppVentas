@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmEstatusCliente">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <!--Ruta/Version-->
+            <RowDefinition Height="20" />
+            <!--Título-->
+            <RowDefinition Height="20" />
+            <!--Totales-->
+            <RowDefinition Height="60" />
+            <!--Botones1-->
+            <RowDefinition Height="*" />
+            <!--Lista-->
+            <RowDefinition Height="55" />
+            <!--Botones2-->
+            <RowDefinition Height="Auto" />
+            <!--Botón de Regresar y Liberar-->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+        
+        <Label Text="ESTATUS CLIENTES" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Medium"/>
+
+        <!--grid para Mostrar los totales-->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="txtTotClientes" Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="txtTotVisitados" Grid.Row="0" Grid.Column="1" TextColor="Green"/>
+            <Label x:Name="txtTotNoVisitados" Grid.Row="0" Grid.Column="2" TextColor="Red"/>
+            <Label x:Name="txtTotPagos" Grid.Row="0" Grid.Column="3" TextColor="Orange"/>
+
+        </Grid>
+        <!--grid para Mostrar los totales-->
+
+        <!--grid para Mostrar la botonera1-->
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text = "Busca Cte" Grid.Row="0" Grid.Column="0" Clicked="OnClickedBuscarCte"/>
+            <!--<Button Text = "Visita" Grid.Row="0" Grid.Column="1" TextColor="Green" Clicked="OnClickedVisitados"/>-->
+            <Button Text = "Venta Pago" Grid.Row="0" Grid.Column="1" TextColor="Green" Clicked="OnClickedVentaPagos"/>
+            <Button Text = "NO Visita" Grid.Row="0" Grid.Column="2" TextColor="Red" Clicked="OnClickedNoVisitados"/>
+            <!--<Button x:Name="btnPagos" Text = "Pagos" Grid.Row="0" Grid.Column="3" TextColor="Orange" Clicked="OnClickedPagos"/>-->
+            <Button x:Name="btnPagos" Text = "Visitados" Grid.Row="0" Grid.Column="3" TextColor="Orange" Clicked="OnClickedVisitados"/>
+
+        </Grid>
+        <!--grid para Mostrar la botonera1-->
+
+        <!--grid para Mostrar los Clientes-->
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="lsvStatusClientes" HasUnevenRows="false" Header="Header" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" ItemSelected ="OnSelectionCliente">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                            <Label Text="" WidthRequest="20"></Label>
+                            <Label Text="Clave" FontSize="Small" FontAttributes="Bold" WidthRequest="60"></Label>
+                            <Label Text="Cliente" FontSize="Small" FontAttributes="Bold" WidthRequest="200"></Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <BoxView Color="{Binding cstatusColor}" WidthRequest="20"></BoxView>
+                                <Label Text="{Binding sCliente}" FontSize="Small" WidthRequest="60"></Label>
+                                <Label Text="{Binding sNombreComercial}" FontSize="Small" WidthRequest="200"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <!--grid para Mostrar los Clientes-->
+
+        <!--grid para Mostrar la botonera2-->
+        <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnReImpVta" Text = "ReImp Vta" Grid.Row="0" Grid.Column="0" Clicked="OnClickedReimprimirVenta"/>
+            <Button x:Name="btnReImpDev" Text = "ReImp Dev" Grid.Row="0" Grid.Column="1" Clicked="OnClickedReimprimirDevolucion"/>
+            <Button x:Name="btnBorrarVta" Text = "Borra Vta" Grid.Row="0" Grid.Column="2" Clicked="OnClickedBorrarVenta"/>
+            <Button x:Name="btnBorrarDev" Text = "Borra Dev" Grid.Row="0" Grid.Column="3" Clicked="OnClickedBorrarDevol"/>
+
+        </Grid>
+        <!--grid para Mostrar la botonera2-->
+
+        <Button Text = "Regresar" Grid.Row="6" Grid.Column="0"  Clicked="OnClickedRegresar" />
+        <Button Text = "Liberar" Grid.Row="6" Grid.Column="2" Clicked="OnClickedLiberar"/>
+
+    </Grid>
+</ContentPage>

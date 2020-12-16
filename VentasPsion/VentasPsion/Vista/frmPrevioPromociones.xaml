@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmPrevioPromociones">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Detalle de la Promoción" Grid.Row="0" Grid.Column="0" />
+
+        <!--grid para ListView-->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="lsvPrevio" Grid.Row="0" Grid.Column="0" HasUnevenRows="false" Header="Header Value">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                            <Label Text="Clave" FontSize="Small" FontAttributes="Bold" WidthRequest="40"/>
+                            <Label Text="Descripción" FontSize="Small" FontAttributes="Bold" WidthRequest="80"/>
+                            <Label Text="Cantidad" FontSize="Small" FontAttributes="Bold" HorizontalTextAlignment="End" WidthRequest="60"/>
+                            <Label Text="Tipo" FontSize="Small" FontAttributes="Bold" WidthRequest="80"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text ="{Binding arc_clave}"  FontSize="Small" WidthRequest="40"/>
+                                <Label Text ="{Binding ard_corta}"  FontSize="Small" WidthRequest="80"/>
+                                <Label Text ="{Binding ppn_cantidad}" FontSize="Small" HorizontalTextAlignment="End" WidthRequest="60"/>
+                                <Label Text ="{Binding ppc_tipo}"   FontSize="Small" WidthRequest="80"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <!--grid para ListView-->
+
+        <!--<Button Text = "Regresar" Grid.Row="2" Grid.Column="0" Clicked="OnClickedAvanzar" />-->
+        <Button Text = "Aceptar" Grid.Row="2" Grid.Column="2"  Clicked="OnClickedAvanzar" />
+    </Grid>
+
+</ContentPage>

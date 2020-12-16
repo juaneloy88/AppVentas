@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmMenuUtilerias">
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+
+
+            <ListView x:Name="listViewMenuUtilerias" HasUnevenRows="True" ItemSelected="OnClickMenuSeleccionado">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="60">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Button BackgroundColor="Transparent" Grid.Column="0"  InputTransparent="{Binding Habilitado}" IsVisible="{Binding Habilitado}" HorizontalOptions="Start" Image="{Binding Icon}"  Margin="5"/>
+                                <Label Grid.Column="1" Text="{Binding Opcion}" InputTransparent="{Binding Habilitado}" IsVisible="{Binding Habilitado}"  VerticalTextAlignment="Center" Margin="5"/>
+                                <Label Text="&#xf105;" Grid.Column="2"  FontSize="20" InputTransparent="{Binding Habilitado}" IsVisible="{Binding Habilitado}"  FontFamily="FontAwesome" HorizontalTextAlignment="End" Margin="10"/>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

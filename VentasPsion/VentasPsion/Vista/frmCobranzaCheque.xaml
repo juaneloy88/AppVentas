@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmCobranzaCheque">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Text="Ruta " Grid.Row="0" Grid.Column="0" />
+        <Label Text="version" Grid.Row="0" Grid.Column="2" />
+
+        <!--grid para uso de títulos-->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="COBRANZA"  Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="0" Grid.Column="0" />
+            <Label Text="CHEQUE"  Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="1" Grid.Column="0" x:Name="lblTitulo"/>
+
+        </Grid>
+        <!--grid para uso de títulos-->
+
+        <!--grid para Captura de Número de Bonificaciones-->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="180" />
+            </Grid.ColumnDefinitions>
+
+            <Entry Text="Banco:" Grid.Row="0" Grid.Column="0" IsEnabled="False" FontAttributes="Bold" TextColor="Black"/>
+            <Picker x:Name="pckBancos" Title = "Seleccione un Banco" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand"/>
+
+            <Entry Text="N°Cheque:" Grid.Row="1" Grid.Column="0" IsEnabled="False" FontAttributes="Bold" TextColor="Black" />
+            <Entry x:Name="txtNoCheque" Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
+
+            <Entry Text="Monto $$:" Grid.Row="2" Grid.Column="0" IsEnabled="False" FontAttributes="Bold" TextColor="Black" />
+            <Entry x:Name="txtMonto" Keyboard="Numeric" Grid.Row="2" Grid.Column="1"/>
+
+            <Entry Text="N°Cuenta:" Grid.Row="3" Grid.Column="0" IsEnabled="False" FontAttributes="Bold" TextColor="Black" />
+            <Entry x:Name="txtNoCuenta" Keyboard="Numeric" Grid.Row="3" Grid.Column="1"/>
+
+        </Grid>
+        <!--grid para Captura de Número de Bonificaciones-->
+
+        <Button Text = "Regresar" Grid.Row="3" Grid.Column="0"  Clicked="onClikedRegresar" />
+
+        <Button Text = "Aceptar" Grid.Row="3" Grid.Column="2"  Clicked="onClikedAceptar"/>
+
+    </Grid>
+
+</ContentPage>

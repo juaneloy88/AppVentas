@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmResumenAbonoEnvase">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <Label Text="RESUMEN DE ABONO DE ENVASE" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="CLIENTE:" FontSize="Medium" VerticalTextAlignment="Start" Grid.Row="0" Grid.Column="1"></Label>
+            <Label x:Name="lblCliente" Text="" FontSize="Medium" VerticalTextAlignment="Start" TextColor="Black" FontAttributes="Bold" Grid.Row="0" Grid.Column="2" ></Label>
+
+            <ListView x:Name="lsvResumenEnvase" HasUnevenRows="false" Header="Header" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" RowHeight="25" SeparatorColor="LightGray" >
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                            <Label Text="Env"   FontSize="Medium" FontAttributes="Bold" WidthRequest="47"></Label>
+                            <Label Text="S.Ini" FontSize="Medium" FontAttributes="Bold" WidthRequest="52"></Label>
+                            <Label Text="Crg" FontSize="Medium" FontAttributes="Bold" WidthRequest="38"></Label>
+                            <Label Text="Abn" FontSize="Medium" FontAttributes="Bold" WidthRequest="41"></Label>
+                            <Label Text="Ven" FontSize="Medium" FontAttributes="Bold" WidthRequest="38"></Label>
+                            <Label Text="S.Fin" FontSize="Medium" FontAttributes="Bold" WidthRequest="48"></Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding mec_envase}" FontSize="Medium" WidthRequest="46"></Label>
+                                <Label Text="{Binding men_saldo_inicial}" FontSize="Medium" WidthRequest="52"></Label>
+                                <Label Text="{Binding men_cargo}" FontSize="Medium" WidthRequest="38"></Label>
+                                <Label Text="{Binding men_abono}" FontSize="Medium" WidthRequest="41"></Label>
+                                <Label Text="{Binding men_venta}" FontSize="Medium" WidthRequest="38"></Label>
+                                <Label Text="{Binding men_saldo_final}" FontSize="Medium" WidthRequest="48"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <Button x:Name="btnRegresar" Text="Regresar" Clicked="OnClickedRegresar" Grid.Row="3" Grid.Column="0"  />
+        <Button x:Name="btnImprimir" Text="Imprimir" Clicked="OnClickedImprimir" Grid.Row="3" Grid.Column="2"  />
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmMenuPreventa">
+    <!--
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="400" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Text="Ruta " Grid.Row="0" Grid.Column="0" />
+        <Label Text="version" Grid.Row="0" Grid.Column="2" />
+
+
+
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="AUTO" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="MENU"  VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="0" Grid.Column="1" />
+
+            <Button Text="PREVENTA "    Grid.Row="1" Grid.Column="1" Clicked="OnClickedVenta"  />
+            <Button Text="ENVASE "      Grid.Row="2" Grid.Column="1" Clicked="OnClickedEnvase"/>
+            <Button Text="COBRANZA "    Grid.Row="3" Grid.Column="1" Clicked="OnClickedCobranza"/>
+            <Button Text="CONSULTA "    Grid.Row="4" Grid.Column="1" />
+            <Button Text="RESUMEN  "    Grid.Row="5" Grid.Column="1" />
+            <Button Text="MAPA  "       Grid.Row="5" Grid.Column="1"  Clicked="OnClickedVerMapa" />
+
+        </Grid>
+
+        <Button Text = "Regresar" Grid.Row="2" Grid.Column="0"  Clicked="OnClickedRegresar"/>
+
+        <Button Text = "Avanzar" Grid.Row="2" Grid.Column="2"   IsVisible="False" />
+        
+        
+
+    </Grid> -->
+
+    <!--grid para uso del desarrollador-->
+
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+        <ListView x:Name="listViewMenuPrincipal" CachingStrategy="RecycleElement" HasUnevenRows="True" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="60" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Button BackgroundColor="Transparent" Grid.Column="0" HorizontalOptions="Start" Image="{Binding Icon}"  Margin="5"/>
+                            <Label x:Name="idLabel" Grid.Column="1" Text="{Binding Opcion}" IsEnabled="{Binding Habilitado}" VerticalTextAlignment="Center" Margin="5" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand"/>
+                            <Label Text="&#xf105;" Grid.Column="2"  FontSize="20" FontFamily="FontAwesome" HorizontalTextAlignment="End" Margin="10"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+
+    </ContentPage.Content>
+
+
+</ContentPage>

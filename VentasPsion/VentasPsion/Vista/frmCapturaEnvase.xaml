@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmCapturaEnvase">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="1" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <Label Text="CAPTURA DE ENVASE" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large" TextColor="Black" FontAttributes="Bold"/>
+
+        <!--grid para Mostrar la lista de Envase-->
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="lsvEnvase" HasUnevenRows="False" Header="Header" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" ItemSelected="OnSelectionEnvase">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                            <Label Text="Clav" FontSize="Small" FontAttributes="Bold" WidthRequest="35"></Label>
+                            <Label Text="S.Ini" FontSize="Small" FontAttributes="Bold" WidthRequest="35" HorizontalTextAlignment="End"></Label>
+                            <Label Text="Carg" FontSize="Small" FontAttributes="Bold" WidthRequest="35" HorizontalTextAlignment="End"></Label>
+                            <Label Text="Abon" FontSize="Small" FontAttributes="Bold" WidthRequest="35" HorizontalTextAlignment="End"></Label>
+                            <Label Text="Vnta" FontSize="Small" FontAttributes="Bold" WidthRequest="35" HorizontalTextAlignment="End"></Label>
+                            <Label Text="S.Fin" FontSize="Small" FontAttributes="Bold" WidthRequest="35" HorizontalTextAlignment="End"></Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding mec_envase}" FontSize="Small" WidthRequest="35"></Label>
+                                <Label Text="{Binding men_saldo_inicial}" FontSize="Small" WidthRequest="35" HorizontalTextAlignment="End"></Label>
+                                <Label Text="{Binding men_cargo}" FontSize="Small" WidthRequest="35" HorizontalTextAlignment="End" ></Label>
+                                <Label Text="{Binding men_abono}" FontSize="Small" WidthRequest="35" HorizontalTextAlignment="End" ></Label>
+                                <Label Text="{Binding men_venta}" FontSize="Small" WidthRequest="35" HorizontalTextAlignment="End" ></Label>
+                                <Label Text="{Binding men_saldo_final}" FontSize="Small" WidthRequest="35" HorizontalTextAlignment="End" ></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <!--grid para Mostrar la lista de Envase-->
+
+        <Button Text = "Regresar" Grid.Row="4" Grid.Column="0" Clicked="OnClickedRegresar" />
+        <Button Text = "Avanzar" Grid.Row="4" Grid.Column="2" Clicked="OnClickedAvanzar" />
+
+    </Grid>
+</ContentPage>

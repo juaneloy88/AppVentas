@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmMostrarPedido">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="1" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+        
+        <Label Text="MOSTRAR PEDIDO" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large" TextColor="Black" FontAttributes="Bold"/>
+
+        <!--<Button Text = "Mostrar" Grid.Row="2" Grid.Column="1" Clicked="OnClickedMostrar"/>-->
+
+        <!--grid para Mostrar el pedido-->
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="lsvMostrarPedido" HasUnevenRows="false" Header="Header" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                            <Label Text="Clave" FontSize="Small" FontAttributes="Bold" WidthRequest="40"></Label>
+                            <Label Text="Descripción" FontSize="Small" FontAttributes="Bold" WidthRequest="155"></Label>
+                            <Label Text="Cant." FontSize="Small" FontAttributes="Bold" WidthRequest="35" HorizontalTextAlignment="End"></Label>
+                            <Label Text="Importe" FontSize="Small" FontAttributes="Bold" WidthRequest="90" HorizontalTextAlignment="End"></Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding sClaveAfecta}" FontSize="Small" WidthRequest="40"></Label>
+                                <Label Text="{Binding sDescripcion}" FontSize="Small" WidthRequest="155"></Label>
+                                <Label Text="{Binding iVenta}" FontSize="Small" WidthRequest="35" HorizontalTextAlignment="End" ></Label>
+                                <Label Text="{Binding dImporte, StringFormat='{0:#,0.00}'}" FontSize="Small" WidthRequest="95" HorizontalTextAlignment="End" ></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <!--grid para Mostrar el pedido-->
+
+        <!--grid para Mostrar los totales-->
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="TOTAL CARTONES:" Grid.Row="0" Grid.Column="1" />
+            <Label x:Name="txtTotCartones" Grid.Row="0" Grid.Column="2" FontAttributes="Bold"/>
+            <Label Text="TOTAL IMPORTE:" Grid.Row="1" Grid.Column="1" />
+            <Label x:Name="txtTotImporte" Grid.Row="1" Grid.Column="2" FontAttributes="Bold" />
+
+        </Grid>
+        <!--grid para Mostrar los totales-->
+
+        <Button Text = "Regresar" Grid.Row="5" Grid.Column="0" Clicked="OnClickedRegresar" />
+        <Button Text = "Avanzar" Grid.Row="5" Grid.Column="2" Clicked="OnClickedAvanzar" />
+
+    </Grid>
+</ContentPage>

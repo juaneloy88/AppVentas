@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmResumenDia">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />            
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <Label Text="RESUMEN DEL DIA" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large" TextColor="Black" FontAttributes="Bold"/>
+
+        <!--grid para Mostrar los Documentos-->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="lsvResumenDia" HasUnevenRows="false" Header="Header" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                            <Label Text="Clave" FontSize="Small" FontAttributes="Bold" WidthRequest="40"></Label>
+                            <Label Text="Descripción" FontSize="Small" FontAttributes="Bold" WidthRequest="160"></Label>
+                            <Label Text="Cantidad" FontSize="Small" FontAttributes="Bold" WidthRequest="90" HorizontalTextAlignment="End"></Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding sClaveAfecta}" FontSize="Small" WidthRequest="40"></Label>
+                                <Label Text="{Binding sDescripcion}" FontSize="Small" WidthRequest="160"></Label>
+                                <Label Text="{Binding iVenta}" FontSize="Small" WidthRequest="90" HorizontalTextAlignment="End" ></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <!--grid para Mostrar los Documentos-->
+
+        <!--grid para el Total-->
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!--<Label Text="Cartones:" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label x:Name="lblCartones" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold"/>-->
+
+            <Label Text="Cartones:" Grid.Row="0" Grid.Column="1" FontSize="Medium" FontAttributes="Bold"/>
+            <Label x:Name="lblCartones" Grid.Row="0" Grid.Column="2" FontSize="Medium" FontAttributes="Bold"/>
+
+        </Grid>
+        <!--grid para el Total-->
+
+        <!--grid para Mostrar el Importe Total--><!--
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            --><!--<Button x:Name="btnImprimirTicket" Text="Imprimir Ticket" Clicked="btnImprimirTicket_Clicked" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand"/>--><!--
+
+        </Grid>
+        --><!--grid para Mostrar el Importe Total-->
+
+        <Button Text = "Regresar" Grid.Row="4" Grid.Column="0"  Clicked="OnClickedRegresar" />
+        <Button x:Name="btnImprimirTicket" Text="Imprimir" Clicked="btnImprimirTicket_Clicked" Grid.Row="4" Grid.Column="2"/>
+
+    </Grid>
+</ContentPage>

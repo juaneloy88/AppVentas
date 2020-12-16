@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmPrevio">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="400" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Text="Ruta " Grid.Row="0" Grid.Column="0" />
+        <Label Text="version" Grid.Row="0" Grid.Column="2" />
+
+
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+
+            <Label Text="PREVIO"  Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="0" Grid.Column="0" />
+
+            <Label Text="Clave"     FontSize ="Medium" Grid.Row="1" Grid.Column="0" />
+            <Label Text="Nombre"    FontSize ="Medium" Grid.Row="2" Grid.Column="0" />
+            <Label Text="Saldo Ant" FontSize ="Medium" Grid.Row="3" Grid.Column="0" />
+
+            <Label Text="Pedido"    FontSize ="Medium" Grid.Row="4" Grid.Column="0" />
+            <Label Text="Pago Prev" FontSize ="Medium" Grid.Row="5" Grid.Column="0" />
+            <Label Text="Saldo Fin" FontSize ="Medium" Grid.Row="6" Grid.Column="0" />
+
+            <Label Text="Credito"   FontSize ="Medium"  Grid.Row="7" Grid.Column="0" />
+            <Label Text="Cheque"    FontSize ="Medium"  Grid.Row="8" Grid.Column="0"  />
+
+            <Entry x:Name="txtClave"    FontSize ="Medium" Grid.Row="1" Grid.Column="1"  Keyboard="Telephone" Completed="txtClave_Completed" />
+            <!--<Label Text="CLAVE"     FontSize ="Medium" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>-->
+            <Label x:Name="lblNombre"   FontSize ="Medium" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Label x:Name="lblSaldoAnt" FontSize ="Medium" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+            <Label x:Name="lblPedido"   FontSize ="Medium" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Label x:Name="lblPagoPrev" FontSize ="Medium" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Label x:Name="lblSaldoFin" FontSize ="Medium" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+            <Label x:Name="lblTipoCredito"  FontSize ="Medium"   Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Label x:Name="lblCheque"       FontSize ="Medium"  Grid.Row="8" Grid.Column="1"  Grid.ColumnSpan="2"/>
+
+          
+
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <Button Text = "Regresar" Grid.Row="2" Grid.Column="0" Clicked="OnClickedRegresar"  />
+
+    </Grid>
+
+</ContentPage>

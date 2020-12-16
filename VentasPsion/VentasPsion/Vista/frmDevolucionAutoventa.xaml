@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmDevolucionAutoventa">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="400" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="DEVOLUCION"  Grid.ColumnSpan="4" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="0" Grid.Column="0" />
+
+            <Label Text="Articulo"      FontSize ="Medium" Grid.Row="1" Grid.Column="0" />
+            <Label Text="Desc. Corta"   FontSize ="Medium" Grid.Row="2" Grid.Column="0" />
+            <Label Text="Descripcion"   FontSize ="Medium" Grid.Row="3" Grid.Column="0" />
+            <Label Text="Precio"        FontSize ="Medium" Grid.Row="4" Grid.Column="0" />
+            <Label Text="Cantidad"      FontSize ="Medium" Grid.Row="5" Grid.Column="0" />
+            <Label Text="Subtotal"      FontSize ="Medium" Grid.Row="6" Grid.Column="0" />
+
+            <Entry x:Name="txtArticulo" Grid.Row="1" Grid.Column="1" Keyboard="Text"    Completed="Entry_Completed_txtArticulo"    />
+            <Label x:Name="lblCorta"    Grid.Row="2" Grid.Column="1"  FontSize ="Medium" FontAttributes="Bold"  Grid.ColumnSpan="3"  />
+            <Label x:Name="lblDescripcion" Grid.Row="3" Grid.Column="1" FontSize ="Medium" FontAttributes="Bold" Grid.ColumnSpan="3"   />
+            <Label x:Name="lblPrecio"   Grid.Row="4" Grid.Column="1" FontSize ="Medium" FontAttributes="Bold"    />
+            <Entry x:Name="txtCantidad" Grid.Row="5" Grid.Column="1" Keyboard="Numeric"   TextChanged="txtCantidad_TextChanged" Placeholder="0"/>
+            <Label x:Name="lblSubtotal" Grid.Row="6" Grid.Column="1" FontSize ="Medium" FontAttributes="Bold"  />
+
+            <Label Text="Total"           Grid.Row="6" Grid.Column="2" FontSize ="Medium" />
+
+            <Label x:Name="lblTotal"      Grid.Row="6" Grid.Column="3" FontSize ="Medium" FontAttributes="Bold" />
+
+            <Button Text = "Agregar" Grid.Row="7" Grid.Column="0"  Grid.ColumnSpan="2" Clicked="OnClickedAgregar"/>
+            <Button Text = "Resumen" Grid.Row="7" Grid.Column="2"  Grid.ColumnSpan="2" Clicked="onClickedResumen"/>
+
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <Button Text = "Regresar" Grid.Row="2" Grid.Column="0" Clicked="OnClickedRegresar" />
+
+        <Button Text = "Avanzar" Grid.Row="2" Grid.Column="2" Clicked="OnClickedCobranza" />
+
+    </Grid>
+
+</ContentPage>

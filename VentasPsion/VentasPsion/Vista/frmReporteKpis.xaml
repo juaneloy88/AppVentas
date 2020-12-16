@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmReporteKpis" 
+             Title="REPORTE KPIs">
+    <ContentPage.ToolbarItems>
+
+
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="listViewKpis" CachingStrategy="RecycleElement" HasUnevenRows="True" >
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal" BackgroundColor="Orange">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Detalles" Grid.Column="0" FontSize="20" VerticalTextAlignment="Center" Margin="5"/>
+                        <Label Text="Orden" Grid.Column="2"  FontSize="20" FontFamily="FontAwesome" HorizontalTextAlignment="End" Margin="10"/>
+                    </Grid>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <!--<DataTemplate>
+                    <ViewCell Height="60" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Label Grid.Column="0" Text="{Binding pkc_descripcion}"  VerticalTextAlignment="Center" Margin="5"/>
+                            <Label Grid.Column="0" Text="{Binding pkn_cuota}"  VerticalTextAlignment="Center" Margin="5"/>
+                            <Label Text="{Binding pkn_orden}" Grid.Column="1"  FontSize="20" FontFamily="FontAwesome" HorizontalTextAlignment="End" Margin="10"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate> -->
+
+       
+                    <DataTemplate>
+                    <ViewCell>
+                        <Grid VerticalOptions="CenterAndExpand"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="Transparent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <!-- -->
+                            <Grid Grid.Row="0"
+                  BackgroundColor="Transparent"
+                  Padding="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0"  TextColor="#4169e1" Font="Bold" 
+                     Grid.Column="0"
+                     Text="Descripción:"/>
+                                <Label Grid.Row="0"
+                     Grid.Column="1"
+                     Text="{Binding pkc_descripcion, Mode = TwoWay}"/>
+                            </Grid>
+                            <!-- -->
+                            <Grid Grid.Row="1"
+                  BackgroundColor="Transparent"
+                  Padding="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0"  TextColor="#4169e1" Font="Bold" 
+                     Grid.Column="0"
+                     Text="Cuota:"/>
+                                <Label Grid.Row="0"
+                     Grid.Column="1"
+                     Text="{Binding pkn_cuota, Mode = TwoWay}"/>
+                            </Grid>
+                            <!-- -->
+                            <Grid Grid.Row="2"
+                  BackgroundColor="Transparent"
+                  Padding="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0"  TextColor="#4169e1" Font="Bold" 
+                     Grid.Column="0"
+                     Text="Venta:"/>
+                                <Label Grid.Row="0"
+                     Grid.Column="1"
+                     Text="{Binding pkn_venta, Mode = TwoWay}"/>
+                                <Label Grid.Row="0"  Font="Bold,16" HorizontalOptions="CenterAndExpand"
+                     Grid.Column="2"
+                     Text="{Binding pkn_orden}"  />
+                            </Grid>
+                            <!-- -->
+                            <Grid Grid.Row="3"
+                  BackgroundColor="Transparent"
+                  Padding="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0"  TextColor="#4169e1" Font="Bold" 
+                     Grid.Column="0"
+                     Text="Diferencia:"/>
+                                <Label Grid.Row="0"   
+                     Grid.Column="1"
+                     Text="{Binding pkn_diferencia, Mode = TwoWay}"/>
+                            </Grid>
+                            <!-- -->
+                            <Grid Grid.Row="4"
+                  BackgroundColor="Transparent"
+                  Padding="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0"  TextColor="#4169e1" Font="Bold" 
+                     Grid.Column="0"
+                     Text="Porcentaje:"/>
+                                <Label Grid.Row="0"
+                     Grid.Column="1"
+                     Text="{Binding pkn_porcentaje,StringFormat='%{0}'}"/>
+                            </Grid>
+
+                        </Grid>
+                    </ViewCell>
+                    </DataTemplate>
+           
+
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

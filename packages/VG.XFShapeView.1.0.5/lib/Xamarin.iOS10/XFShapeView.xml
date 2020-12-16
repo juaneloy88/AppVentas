@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XFShapeView</name>
+    </assembly>
+    <members>
+        <member name="T:XFShapeView.ShapeType">
+            <summary>
+            Represents pre-defined shape types
+            </summary>
+        </member>
+        <member name="F:XFShapeView.ShapeType.Box">
+            <summary>
+            A 4-sides shape (square/rectangle) - can have rounded corners
+            </summary>
+        </member>
+        <member name="F:XFShapeView.ShapeType.Circle">
+            <summary>
+            A circle shape with a radius equals to the minimum value between height &amp; width
+            </summary>
+        </member>
+        <member name="F:XFShapeView.ShapeType.Star">
+            <summary>
+            A star shape for which you can define the number of points and the radius ratio
+            </summary>
+        </member>
+        <member name="F:XFShapeView.ShapeType.Triangle">
+            <summary>
+            A triangle shape - the appearance depends on the height/width ratio
+            </summary>
+        </member>
+        <member name="F:XFShapeView.ShapeType.Oval">
+            <summary>
+            An oval shape - the appearance depends on the height/width ratio
+            </summary>
+        </member>
+        <member name="F:XFShapeView.ShapeType.Diamond">
+            <summary>
+            A diamond shape - 4-sides - the same you can find in a card deck - the appearance depends on the height/width ratio
+            </summary>
+        </member>
+        <member name="F:XFShapeView.ShapeType.Heart">
+            <summary>
+            A heart shape - the appearance depends on the minimum value between height &amp; width
+            </summary>
+        </member>
+        <member name="F:XFShapeView.ShapeType.ProgressCircle">
+            <summary>
+            A progress circle shape acting like a progress bar with a radius equals to the minimum value between height &amp; width
+            </summary>
+        </member>
+        <member name="F:XFShapeView.ShapeType.Path">
+            <summary>
+            A custom path shape defined by a list of points
+            </summary>
+        </member>
+        <member name="T:XFShapeView.ShapeView">
+            <summary>
+            This class allows you to draw different kind of shapes in your Xamarin.Forms PCL
+            </summary>
+        </member>
+        <member name="P:XFShapeView.ShapeView.ShapeType">
+            <summary>
+            Gets or sets the shape type - default value is ShapeType.Box
+            </summary>
+        </member>
+        <member name="P:XFShapeView.ShapeView.Color">
+            <summary>
+            Gets or sets the fill color - default value is Color.Default
+            </summary>
+        </member>
+        <member name="P:XFShapeView.ShapeView.BorderColor">
+            <summary>
+            Gets or sets the border color (ignored if fully transparent or BorderColor &lt;= 0) - default value is Color.Black 
+            </summary>
+        </member>
+        <member name="P:XFShapeView.ShapeView.BorderWidth">
+            <summary>
+            Gets or sets the border width (ignored if value is &lt; 0 or BorderColor is fully transparent) - default value is 0
+            </summary>
+        </member>
+        <member name="P:XFShapeView.ShapeView.CornerRadius">
+            <summary>
+            Gets or sets the corner radius - (ignored if &lt;=0) - default value is 0
+            </summary>
+        </member>
+        <member name="P:XFShapeView.ShapeView.RadiusRatio">
+            <summary>
+            Gets or sets the ratio between inner radius and outer radius (outer = inner * RadiusRatio) - only for Star shape - default value is 0.5
+            </summary>
+        </member>
+        <member name="P:XFShapeView.ShapeView.NumberOfPoints">
+            <summary>
+            Gets or sets the number of points of a star - only for Star shape - default value is 5
+            </summary>
+        </member>
+        <member name="P:XFShapeView.ShapeView.Progress">
+            <summary>
+            Gets or sets the progress value - range from 0 to 100 - only for CircleProgress shape - default value is 0
+            </summary>
+        </member>
+        <member name="P:XFShapeView.ShapeView.ProgressBorderWidth">
+            <summary>
+            Gets or sets the progress border width - only for CircleProgress shape - default value is 3
+            </summary>
+        </member>
+        <member name="P:XFShapeView.ShapeView.ProgressBorderColor">
+            <summary>
+            Gets or sets the progress border color (ignored if fully transparent or ProgressBorderWidth &lt;= 0) - default value is Color.Black 
+            </summary>
+        </member>
+        <member name="P:XFShapeView.ShapeView.Points">
+            <summary>
+            Gets or sets the points describing the path - (ignored if null or empty) - only for Path shape - default value is null
+            </summary>
+        </member>
+    </members>
+</doc>

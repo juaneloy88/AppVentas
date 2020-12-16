@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.FrmSeleccionImpresora">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <Label Text="IMPRESORA BLUETOOTH" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+
+        <!--grid para uso del desarrollador-->
+        <Grid x:Name="grdRecepcion" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Impresora configurada:" FontSize="Medium" VerticalTextAlignment="End" Grid.Row="1" Grid.Column="1"></Label>
+            <Label x:Name="lblImpresoraConfigurada" Text="" FontSize="Medium" VerticalTextAlignment="End" TextColor="Black" FontAttributes="Bold" Grid.Row="2" Grid.Column="1"></Label>
+            <Button x:Name="btnImprimirPrueba" Text = "Impresión de Prueba" Clicked="btnImprimirPrueba_Clicked" Grid.Row="3" Grid.Column="1"/>
+            <Label Text="Cambiar Impresora:" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="5" Grid.Column="1"></Label>
+            <Picker x:Name="pkrEligeImpresora" ItemsSource="{Binding ListaDispositivos}" Title="Seleccione otra Impresora" VerticalOptions="CenterAndExpand" Grid.Row="6" Grid.Column="1"></Picker>
+            <Button x:Name="btnConectar" Text = "Conectar" Clicked="btnConectar_Clicked" Grid.Row="7" Grid.Column="1"/>
+
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <Button x:Name="btnRegresar" Text="Regresar" Clicked="btnRegresar_Clicked" Grid.Row="3" Grid.Column="0"  />
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmResumenAutoVenta">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="45" />
+            <RowDefinition Height="190" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="121" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Ruta 1050" Grid.Row="0" Grid.Column="0" />
+        <Label Text="version 1.0" Grid.Row="0" Grid.Column="2" />
+
+        <!--grid para Título-->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Resumen" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+            <Label Text="Líquido" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Small" FontAttributes="Bold"/>
+
+        </Grid>
+        <!--grid para Título-->
+
+        <!--grid para ListView del Líquido-->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="lsvClave" Grid.Row="0" Grid.Column="0" HasUnevenRows="false" Header="Header Value">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                            <Label Text="Clave" FontSize="Small" FontAttributes="Bold" WidthRequest="40"/>
+                            <Label Text="Desc" FontSize="Small" FontAttributes="Bold" WidthRequest="130"/>
+                            <Label Text="Venta" FontSize="Small" FontAttributes="Bold" WidthRequest="40" HorizontalTextAlignment="End"/>
+                            <Label Text="Pcio" FontSize="Small" FontAttributes="Bold" WidthRequest="40" HorizontalTextAlignment="End"/>
+                            <Label Text="Impt" FontSize="Small" FontAttributes="Bold" WidthRequest="40" HorizontalTextAlignment="End"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+
+                <ListView.ItemTemplate CachingStrategy="RecycleElement" HasUnevenRows="True" >
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text ="{Binding vdn_producto}" FontSize="Small" WidthRequest="40"/>
+                                <Label Text ="{Binding vdd_descripcion}" FontSize="Small" WidthRequest="130"/>
+                                <Label Text ="{Binding vdn_venta}" FontSize="Small" WidthRequest="40" HorizontalTextAlignment="End"/>
+                                <Label Text ="{Binding vdn_precio}" FontSize="Small" WidthRequest="40" HorizontalTextAlignment="End"/>
+                                <Label Text ="{Binding vdn_importe}" FontSize="Small" WidthRequest="40" HorizontalTextAlignment="End"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <!--grid para ListView del Líquido-->
+
+        <!--grid para Títulos-->
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="lblEnvase" Text="Envase" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Small" FontAttributes="Bold"/>
+
+        </Grid>
+        <!--grid para Títulos-->
+
+        <!--grid para ListView para el Envase-->
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="lsvEnvase" Grid.Row="0" Grid.Column="0" HasUnevenRows="false" Header="Header Value">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                            <Label Text="Clave" FontSize="Small" FontAttributes="Bold" WidthRequest="40"></Label>
+                            <Label Text="SIni" FontSize="Small" FontAttributes="Bold" WidthRequest="40" HorizontalTextAlignment="End"></Label>
+                            <Label Text="Cargo" FontSize="Small" FontAttributes="Bold" WidthRequest="42" HorizontalTextAlignment="End"></Label>
+                            <Label Text="Abono" FontSize="Small" FontAttributes="Bold" WidthRequest="42" HorizontalTextAlignment="End"></Label>
+                            <Label Text="Vta" FontSize="Small" FontAttributes="Bold" WidthRequest="40" HorizontalTextAlignment="End"></Label>
+                            <Label Text="SFin" FontSize="Small" FontAttributes="Bold" WidthRequest="40" HorizontalTextAlignment="End"></Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding mec_envase}" FontSize="Small" WidthRequest="40"></Label>
+                                <Label Text="{Binding men_saldo_inicial}" FontSize="Small" WidthRequest="40" HorizontalTextAlignment="End"></Label>
+                                <Label Text="{Binding men_cargo}" FontSize="Small" WidthRequest="42" HorizontalTextAlignment="End" ></Label>
+                                <Label Text="{Binding men_abono}" FontSize="Small" WidthRequest="42" HorizontalTextAlignment="End" ></Label>
+                                <Label Text="{Binding men_venta}" FontSize="Small" WidthRequest="40" HorizontalTextAlignment="End" ></Label>
+                                <Label Text="{Binding men_saldo_final}" FontSize="Small" WidthRequest="40" HorizontalTextAlignment="End" ></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <!--grid para ListView para el Envase-->
+
+        <!--grid para el Total-->
+        <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!--<Label Text="Total: $" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" FontAttributes="Bold"/>
+            <Label x:Name="lblTotal" Text="" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" FontAttributes="Bold"/>-->
+
+            <Label Text="Cartones:" Grid.Row="0" Grid.Column="0" FontAttributes="Bold"/>
+            <Label x:Name="lblCartones" Grid.Row="0" Grid.Column="1" FontAttributes="Bold"/>
+            <Label Text="Importe:" Grid.Row="1" Grid.Column="0" FontAttributes="Bold"/>
+            <Label x:Name="lblTotal" Grid.Row="1" Grid.Column="1" FontAttributes="Bold"/>
+
+        </Grid>
+        <!--grid para el Total-->
+
+        <Button Text = "Regresar" Grid.Row="6" Grid.Column="0" Clicked="onClikedRegresar"/>
+
+    </Grid>
+</ContentPage>

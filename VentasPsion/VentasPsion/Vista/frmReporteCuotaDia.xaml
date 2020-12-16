@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmReporteCuotaDia"
+             Title="RETO DEL DIA">
+    
+    <ContentPage.ToolbarItems>
+     
+       
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="listViewRetoDelDia" CachingStrategy="RecycleElement" HasUnevenRows="True" >
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal" BackgroundColor="Yellow">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="Nombre" Grid.Column="0" FontSize="20" VerticalTextAlignment="Center" Margin="5"/>
+                        <Label Text="Cantidad" Grid.Column="2"  FontSize="20" FontFamily="FontAwesome" HorizontalTextAlignment="End" Margin="10"/>
+                    </Grid>
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="60" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label x:Name="idLabel" Grid.Column="0" Text="{Binding rdc_nombre}"  VerticalTextAlignment="Center" Margin="5"/>
+                            <Label Text="{Binding rdn_cantidad}" Grid.Column="2"  FontSize="20" FontFamily="FontAwesome" HorizontalTextAlignment="End" Margin="10"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

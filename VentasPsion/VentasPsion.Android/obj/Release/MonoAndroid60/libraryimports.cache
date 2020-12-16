@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <ManifestDocuments>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\19\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\21\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\22\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\23\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\24\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\25\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\26\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\27\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\28\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\29\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\31\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\32\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\33\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\34\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\41\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\42\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\43\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\\Release\MonoAndroid60\lp\44\jl\AndroidManifest.xml</ManifestDocument>
+  </ManifestDocuments>
+  <NativeLibraries />
+  <Jars>
+    <Jar>obj\\Release\MonoAndroid60\lp\0\jl\formsviewgroup.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\19\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\20\jl\support-annotations.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\21\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\22\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\23\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\24\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\25\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\26\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\27\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\28\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\29\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\31\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\32\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\33\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\34\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\41\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\42\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\43\jl\classes.jar</Jar>
+    <Jar>obj\\Release\MonoAndroid60\lp\44\jl\classes.jar</Jar>
+  </Jars>
+</Paths>

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmCobranzaBonificacion">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="90" />
+            <RowDefinition Height="38" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="txtRuta" Text="" Grid.Row="0" Grid.Column="0" />
+        <Label Text="version" Grid.Row="0" Grid.Column="2" />
+
+        <!--grid para uso de títulos-->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="COBRANZA"  Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="0" Grid.Column="0" />
+            <Label Text="BONIFICACIÓN"  Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="1" Grid.Column="0" />
+
+        </Grid>
+        <!--grid para uso de títulos-->
+
+        <!--grid para Captura de Número de Bonificaciones-->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Entry Text="N° Bonificación" Grid.Row="0" Grid.Column="0" IsEnabled="False" FontAttributes="Bold" TextColor="Black"/>
+            <Entry x:Name="txtNoBonificacion" Grid.Row="0" Grid.Column="1" Keyboard="Numeric" Completed="Entry_Completed_txtNoBonificacion" />
+
+            <Label Text="Tipo:" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" FontSize="Medium"/>
+            <Label Text="" x:Name="txtTipo" Grid.Row="1" Grid.Column="1" FontAttributes="Bold" FontSize="Medium"/>
+
+            <Label Text="Importe:" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" FontSize="Medium"/>
+            <Label Text="" x:Name="txtImporte" Grid.Row="2" Grid.Column="1" FontAttributes="Bold" FontSize="Medium"/>
+
+        </Grid>
+        <!--grid para Captura de Número de Bonificaciones-->
+
+        <!--grid para Botón de Aplicar-->
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="42" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text = "Aplicar" Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize="Medium" Clicked="OnClickedAplicar"/>
+
+        </Grid>
+        <!--grid para Botón de Aplicar-->
+
+        <!--grid para Mostrar los Documentos-->
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="DOCUMENTOS" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Small" />
+
+            <ListView x:Name="lsvDocumentos" HasUnevenRows="false" Header="Header" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                            <Label Text="Folio" FontSize="Small" FontAttributes="Bold" WidthRequest="60"></Label>
+                            <Label Text="Tipo" FontSize="Small" FontAttributes="Bold" WidthRequest="60"></Label>
+                            <Label Text="Importe" FontSize="Small" FontAttributes="Bold" WidthRequest="90" HorizontalTextAlignment="End"></Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding boc_folio}" FontSize="Small" WidthRequest="60"></Label>
+                                <Label Text="{Binding boc_tipo}" FontSize="Small" WidthRequest="60"></Label>
+                                <Label Text="{Binding boi_documento}" FontSize="Small" WidthRequest="90" HorizontalTextAlignment="End"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <!--grid para Mostrar los Documentos-->
+
+        <!--grid para Mostrar el Importe Total-->
+        <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Total: $" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="txtTotal" Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand"/>
+
+        </Grid>
+        <!--grid para Mostrar el Importe Total-->
+
+        <Button Text = "Regresar" Grid.Row="6" Grid.Column="0"  Clicked="OnClickedRegresar" />
+
+        <Button Text = "Aceptar" Grid.Row="6" Grid.Column="2"  Clicked="OnClickedAceptar"/>
+
+    </Grid>
+</ContentPage>

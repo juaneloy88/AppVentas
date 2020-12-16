@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmCobranza">
+     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />       <!--TITULO -->
+                
+                <RowDefinition Height="30" />       <!--ID_CLIENTE -->
+                <RowDefinition Height="30" />       <!--LIMITE VENTA -->
+                <RowDefinition Height="30" />       <!--PAGO PREVENTA -->
+                <RowDefinition Height="30" />       <!--VENTA -->
+                <RowDefinition Height="30" />       <!--SALDO DOCTO -->
+                
+                <RowDefinition Height="25" />       <!--ETIQUETA PAGOS -->
+                <RowDefinition Height="25" />       <!--ETIQUETA PAGOS  -->
+                <RowDefinition Height="25" />       <!--ETIQUETA PAGOS  -->
+
+                <RowDefinition Height="25" />       <!--BOTONES DE PAGOS -->
+                <RowDefinition Height="25" />       <!--BOTONES DE PAGOS  -->
+
+                <!--<RowDefinition Height="25" />-->
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="COBRANZA"  Grid.ColumnSpan="4" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="0" Grid.Column="0" />
+
+            <Label Text="Clave"  FontSize ="Medium" Grid.Row="1" Grid.Column="0" />
+            <Label Text="Limite Vta"  FontSize ="Medium" Grid.Row="2" Grid.Column="0" />
+            <!--<Label Text="Saldo Ant "  FontSize ="Medium" Grid.Row="3" Grid.Column="0" />-->
+            <Label Text="Pago Prev"    FontSize ="Medium" Grid.Row="3" Grid.Column="0" x:Name="lblPPreventa"/>
+
+            <Label Text="Venta"  FontSize ="Medium" Grid.Row="4" Grid.Column="0" />
+            <!--<Label Text="Saldo Total"  FontSize ="Medium" Grid.Row="5" Grid.Column="0" />-->
+            <Label Text="Saldo Docto"  FontSize ="Medium" Grid.Row="5" Grid.Column="0" />
+
+            <!--<Label Text="Sin comp"    FontSize ="Medium" Grid.Row="3" Grid.Column="2" x:Name="lblsincom" IsVisible="False" Grid.ColumnSpan="2"/>-->
+            
+            
+            <Label x:Name="lblClave"   Text="0.00" FontSize ="Medium" FontAttributes="Bold"    Grid.Row="1" Grid.Column="1"   />
+            <Label x:Name="lblLimite"   Text="0.00" FontSize ="Medium" FontAttributes="Bold"    Grid.Row="2" Grid.Column="1"   />
+            <Label x:Name="lblSaldoAnt" Text="0.00" FontSize ="Medium" FontAttributes="Bold"    Grid.Row="3" Grid.Column="1"  IsVisible="False"/>
+            <Label x:Name="lblPagoPrev" Text="0.00" FontSize ="Medium" FontAttributes="Bold"    Grid.Row="3" Grid.Column="1" />
+
+            <Label x:Name="lblVenta"    Text="0.00"  FontSize ="Medium" FontAttributes="Bold"   Grid.Row="4" Grid.Column="1"  Grid.ColumnSpan="1" />
+            <Label x:Name="lblSaldoTotal" Text="0.00"  FontSize ="Medium" FontAttributes="Bold"   Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="1" IsVisible="False"/>
+            <Label x:Name="lblSaldoNuevo" Text="0.00"  FontSize ="Medium" FontAttributes="Bold"   Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1"/>
+
+            <Label x:Name="lblMsn1"     Text="Ticket" FontSize ="Medium" FontAttributes="Bold"    Grid.Row="2" Grid.Column="3" IsVisible="False" />
+            <Label x:Name="lblMsn2"     Text="Para"  FontSize ="Medium" FontAttributes="Bold"   Grid.Row="3" Grid.Column="3"  IsVisible="False" />
+            <Label x:Name="lblMsn3"     Text="Cred y Cobr"  FontSize ="Medium" FontAttributes="Bold"   Grid.Row="4" Grid.Column="3"  IsVisible="False" />
+
+            <Picker x:Name="pckPagos" Title = "" VerticalOptions="CenterAndExpand" Grid.Row="4" Grid.Column="2" IsVisible="False" SelectedIndexChanged="SelectedIndexChanged"/>
+            
+            <!--ETIQUETA PAGOS -->
+            <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="3" BackgroundColor="DarkOrange" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="25" />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Efec-Transf"   FontSize ="Medium" Grid.Row="0" Grid.Column="0" />
+                <Label Text="Bonificacion"  FontSize ="Medium" Grid.Row="1" Grid.Column="0" />
+                <Label Text="Anticipo"      FontSize ="Medium" Grid.Row="2" Grid.Column="0" />
+
+                <Label x:Name="lblEfectivo"     Text="0.00"  FontSize ="Medium" Grid.Row="0" Grid.Column="1" />
+                <Label x:Name="lblBonificacion" Text="0.00"  FontSize ="Medium" Grid.Row="1" Grid.Column="1" />
+                <Label x:Name="lblAnticipo"     Text="0.00"  FontSize ="Medium" Grid.Row="2" Grid.Column="1" />
+
+                <Label Text="Cheque"        FontSize ="Medium" Grid.Row="0" Grid.Column="2" />
+                <Label Text="Tarjeta"       FontSize ="Medium" Grid.Row="1" Grid.Column="2" />
+
+                <Label x:Name="lblCheque"       Text="0.00"  FontSize ="Medium" Grid.Row="0" Grid.Column="3" />
+                <Label x:Name="lblTajeta"       Text="0.00"  FontSize ="Medium" Grid.Row="1" Grid.Column="3" />
+
+            </Grid>
+
+            <!--BOTONES DE PAGOS-->
+            <Grid Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="3" BackgroundColor="DarkRed" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />     
+                </Grid.ColumnDefinitions>
+
+                <Button Text = "Cheque"        Clicked="OnClickedCheque"        Grid.Row="0" Grid.Column="1"  Grid.ColumnSpan="3" x:Name="btnCheque" />
+                <Button Text = "Efectivo"      Clicked="OnClickedEfectivo"      Grid.Row="0" Grid.Column="4"  Grid.ColumnSpan="3" x:Name="btnEfectivo" />
+                <Button Text = "Tarjeta"       Clicked="OnClickedTarjeta"       Grid.Row="0" Grid.Column="7"  Grid.ColumnSpan="3" x:Name="btnTarjeta" />
+                <!--<Button Text = "Bonificacion"  Clicked="OnClickedBonificacion"  Grid.Row="1" Grid.Column="1"  Grid.ColumnSpan="4" x:Name="btnBonifcacion" />-->
+                <Button Text = "Anticipos"     Clicked="OnClickedAnticipos"     Grid.Row="1" Grid.Column="1"  Grid.ColumnSpan="4" x:Name="btnAnticipos" />
+                <Button Text = "Transferencia" Clicked="OnClickedTransferencia" Grid.Row="1" Grid.Column="5"  Grid.ColumnSpan="5" x:Name="btnTrasnferencia" />
+                
+            </Grid>
+
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <Button Text = "Regresar"   Grid.Row="2" Grid.Column="0" Clicked="OnClickedRegresar"/>       
+        <Button x:Name="btnTerminar" Text = "Terminar"   Grid.Row="2" Grid.Column="2" Clicked="OnClickedTerminar"/>
+    </Grid>
+    
+</ContentPage>

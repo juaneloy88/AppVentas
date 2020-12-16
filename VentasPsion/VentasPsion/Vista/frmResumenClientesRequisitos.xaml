@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmResumenClientesRequisitos">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <Label Text="CLIENTES REQUISITOS" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large" TextColor="Black" FontAttributes="Bold"/>
+        <Button BackgroundColor="Transparent" TextColor="#2874A6"  Text="Clientes Pendientes" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Clicked="OnClickedPendientes" HorizontalOptions="CenterAndExpand"/>
+        
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!--Header-->
+            <Label Text="# Clientes" Grid.Row="0" Grid.Column="2" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Label Text="Requiere" Grid.Row="0" Grid.Column="3" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+            <Button BackgroundColor="Transparent" HorizontalOptions="Center" TextColor="#2874A6"  Text="Requiere Factura" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Clicked="OnClickClientes"/>
+            <Label x:Name="lblFactn"  Text="" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center"/>
+            <!--Font Awesome-->
+            <Label x:Name="lblFactrue" Text="&#xf046;" TextColor="Green" Grid.Row="1" Grid.Column="3" 
+             FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lblFacfalse" Text="&#xf00d;" TextColor="DarkRed" Grid.Row="1" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+
+
+            <!--<Label Text="        REQUIERE TERMINAL" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>-->
+            <Button BackgroundColor="Transparent" HorizontalOptions="Center" TextColor="#2874A6"  Text=" Requiere Terminal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Clicked="OnClickTarjeta"/>
+            <Label x:Name="lblTer" Text="" Grid.Row="2" Grid.Column="2" HorizontalTextAlignment="Center"/>
+
+            <Label x:Name="lblTertrue" Text="&#xf046;" TextColor="Green" Grid.Row="2" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lblTerfalse" Text="&#xf00d;" TextColor="DarkRed" Grid.Row="2" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+
+
+            <Label Text="        SE USA CHAMUQUITO" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label x:Name="lblChan" Text="" Grid.Row="3" Grid.Column="2" HorizontalTextAlignment="Center"/>
+
+            <Label x:Name="lblChantrue" Text="&#xf046;" TextColor="Green" Grid.Row="3" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lblChanfalse" Text="&#xf00d;" TextColor="DarkRed" Grid.Row="3" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+
+            <Label Text="        TIENE ESCALERAS" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label x:Name="lblEscn" Text="" Grid.Row="4" Grid.Column="2" HorizontalTextAlignment="Center"/>
+
+            <Label x:Name="lblEsctrue" Text="&#xf046;" TextColor="Green" Grid.Row="4" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lblEscfalse" Text="&#xf00d;" TextColor="DarkRed" Grid.Row="4" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+
+            <Label Text="        TIENE RAMPA" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label x:Name="lblRampn"  Text="" Grid.Row="5" Grid.Column="2" HorizontalTextAlignment="Center"/>
+
+            <Label x:Name="lblRamptrue" Text="&#xf046;" TextColor="Green" Grid.Row="5" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lblRampfalse" Text="&#xf00d;" TextColor="DarkRed" Grid.Row="5" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+
+            <Label Text="        ESPACIO ESTRECHO" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label x:Name="lblEspn" Grid.Row="6" Grid.Column="2" HorizontalTextAlignment="Center"/>
+
+            <Label x:Name="lblEsptrue" Text="&#xf046;" TextColor="Green" Grid.Row="6" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lblEspfalse" Text="&#xf00d;" TextColor="DarkRed" Grid.Row="6" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+
+            <Label Text="        PELGRO DE ASALTO" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label x:Name="lblAsalton"  Text="" Grid.Row="7" Grid.Column="2" HorizontalTextAlignment="Center"/>
+
+            <Label x:Name="lblAsaltotrue" Text="&#xf046;" TextColor="Green" Grid.Row="7" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lblAsaltofalse" Text="&#xf00d;" TextColor="DarkRed" Grid.Row="7" 
+             Grid.Column="3" FontFamily="FontAwesome" FontSize="Medium" FontAttributes="Bold" IsVisible="False" HorizontalTextAlignment="Center"/>
+        </Grid>
+
+        <Button Text = "Regresar" Grid.Row="4" Grid.Column="0" Clicked="OnClickedRegresar"/>
+
+    </Grid>
+</ContentPage>

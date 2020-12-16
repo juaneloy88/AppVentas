@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmActualizacionDatosClientes">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblRutaPlusTipoVenta" Text="Ruta " Grid.Row="0" Grid.Column="0" />
+        <Label x:Name="lblVersionApp" Text="version" Grid.Row="0" Grid.Column="2" />
+
+
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Datos"  Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="0" Grid.Column="0" />
+
+            <!--<Label Text="Pagare Entregado"     FontSize ="Medium" Grid.Row="1" Grid.Column="0" />
+            <Label Text=""    FontSize ="Medium" Grid.Row="2" Grid.Column="0" />
+            <Label Text="" FontSize ="Medium" Grid.Row="3" Grid.Column="0" />-->
+
+            <Label Text="Cliente Foco"    FontSize ="Medium" Grid.Row="4" Grid.Column="0" />
+            <Label Text="" FontSize ="Medium" Grid.Row="5" Grid.Column="0" />
+            <Label Text="" FontSize ="Medium" Grid.Row="6" Grid.Column="0" />
+
+            <Label Text="Cooler en 1 Imp"   FontSize ="Medium"  Grid.Row="7" Grid.Column="0" />
+            <Label Text=""    FontSize ="Medium"  Grid.Row="8" Grid.Column="0"  />
+
+            <!--<Switch x:Name="sPagare" Toggled ="OnClickSwitchToggledPagare" Grid.Row="1" Grid.Column="1" HorizontalOptions="EndAndExpand"/>-->
+            <Label x:Name="lblNombre"   FontSize ="Medium" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Label x:Name="lblSaldoAnt" FontSize ="Medium" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+            <Switch x:Name="sClienteFoco" Toggled ="OnClickSwitchToggledFoco" Grid.Row="4" Grid.Column="1" HorizontalOptions="EndAndExpand"/>
+            <Label x:Name="lblPagoPrev" FontSize ="Medium" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Label x:Name="lblSaldoFin" FontSize ="Medium" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+            <Switch x:Name="sCooler" Toggled ="OnClickSwitchToggledCooler" Grid.Row="7" Grid.Column="1" HorizontalOptions="EndAndExpand"/>
+            <Label x:Name="lblCheque"       FontSize ="Medium"  Grid.Row="8" Grid.Column="1"  Grid.ColumnSpan="2"/>
+
+
+
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <Button Text = "Regresar" Grid.Row="2" Grid.Column="0" Clicked="OnClickedRegresar"  />
+
+        <Button Text = "Guardar" Grid.Row="2" Grid.Column="2" Clicked="OnClickedGuardar"  />
+
+    </Grid>
+</ContentPage>

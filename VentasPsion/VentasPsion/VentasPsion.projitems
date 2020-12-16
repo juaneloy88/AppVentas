@@ -1,0 +1,844 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="SharedProjectFile_SccProperties">
+    <SharedProjectFile_ProjectGuid>{a866e6d7-cdab-4f31-9183-e5dbab9f8c11}</SharedProjectFile_ProjectGuid>
+    <SharedProjectFile_SccProjectName>Svn</SharedProjectFile_SccProjectName>
+    <SharedProjectFile_SccAuxPath>Svn</SharedProjectFile_SccAuxPath>
+    <SharedProjectFile_SccLocalPath>Svn</SharedProjectFile_SccLocalPath>
+    <SharedProjectFile_SccProvider>SubversionScc</SharedProjectFile_SccProvider>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>131ff5cc-8b72-4ff5-94aa-2cc6a0f513e2</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>VentasPsion</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Base\FontAwesome.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Base\Formularios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Base\Utilerias.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\activos_comodatos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\anticipos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\cat_segmentos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\clientes_competencia.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\clientes_datos_surtir.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\clientes_requisitos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\conseptos_no_venta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\departamentos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\documentos_cabecera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\documentos_detalle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\envase_sugerido.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\envase_temp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\FacturasVenta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\fecha_reparto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\kpis.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\opciones.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\opciones_app.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\pagare_clientes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\reto_diario.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\solicitudes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\telefonos_clientes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\tickets_cabeceras.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\tipo_movimiento.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\venta_pagos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\version_app.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\volumen_ventas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\ActivosComodatosRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\AnticiposClientesRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\CandadosProductosRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\CandadosProductosRestServiceAPv2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\ComplementosRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\ComplementosRestServiceR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\ConceptosSinVentaRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\ConexionService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\CuotasRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\DepartamentosRestServiceARP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\DocumentosRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\DocumentosRestServiceR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\EncuestasClientesRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\EnvasesSugeridosRestServiceR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\FacturasVentasRestServiceR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\KpisRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\OpcionesEncuestasRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\PedidosSugeridosRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\PermisosAppRestServiceARP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\RequisitosEntregaRestServiceR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\RetosDiariosRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\SegmentosRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\TelefonosClientesRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\TelefonosClientesRestServiceR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\TicketsCabecerasRestServiceA.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\TicketsDetallesRestServiceA.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\TransmitirRestService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\VersionAppRestServiceARP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\VolumenVentasRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\activosComoDatosSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\anticipoSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\bonificacionesSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\BorraDatosTablasService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\candados_productosSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\cargaPromociones.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\clientesSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\clientes_competenciaSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\clientes_estatusSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\clientes_requisitos_surtirSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\conseptoDevolucionesSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\conseptoSinVentaSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\departamentosSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\devolucionesSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\documentos_cabeceraSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\documentos_detalleSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\empleadosSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\encuestasSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\EnvaseService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\existenciaSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\facturasventasSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\fnCapturaEnvase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\cuotaDiaSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\fnResumenDia.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\fnStatusClientes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\fnVentaCabecera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\gpsSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\kpisSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\lista_maestraSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\mostrarPedidoSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\opcionesAppSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\pagare_clientesSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\passwordSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\pedidoSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\productoSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\rutaSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\solicitudesSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\StatusService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\telefonos_clientesSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\venta_cabeceraSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\venta_detalleSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\venta_pagosSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\version_appSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\volumenVentasSR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ActivosComoDatosVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\AnticiposVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\CensoVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ClientesVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\clientes_requisitos_surtirVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\DocumentosVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\EncuestaVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\Estatus_ClientesVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ImprimeAbonoEnvaseAVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ImprimeDevolucionRVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ImprimeEntregaRVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ImprimePagoARPVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ImprimeResumenAPVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ImprimeResumenRVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ImprimeVentaAPVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\KpisVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\MenuPrincipalVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\MenuUsuarioVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\MenuUtileriasVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\opciones_appVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\PasswordVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\PedidoSugeridoVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\PerfilVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\QuejasSugerenciasVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ReportesVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ResumenDiaVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\RetoDelDiaVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\TelefonosVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\TicketsDevolucionVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\TurnoVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\VisitaVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\vmCapturaEnvase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\vmInfoRuta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\vmMostrarPedido.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\VolumenVentaVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\CobranzaVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\DevolucionVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\EnvaseVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\resumenDia.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\Turno.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\VarEntorno.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\BonificacionesRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\ClientesRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\ClientesRestServiceR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\ConceptosDevolRestServiceR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\DetallesVentasRestServiceR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\EmpleadosRestServiceARP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\EnvasesRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\EnvasesRestServiceR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\ExistenciasRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\FechaRepartoRestServiceR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\ListasPreciosRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\ListasPreciosRestServiceR.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\OrdenTicketsRestServiceARP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\PasswordRestServiceARP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\ProductosRestServiceARP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\PromocionesRestServiceAP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\RutaRestServiceARP.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\ServicioApi\StatusRestService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\conexionDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\bonificaciones.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\candados_productos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\clientes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\clientes_estatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\concepto_devoluciones.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\CreaDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\cuota.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\devoluciones.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\empleados.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\encuesta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\envase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\existencia.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\gps.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\leyenda.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\lista_maestra.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\orden_ticket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\password.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\pedido.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\productos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\promociones.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\respuestas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\ruta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\venta_cabecera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Entidad\venta_detalle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Modelo\Servicio\fnVentaDetalle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\VentaVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\vmPromociones.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\vmResumenVenta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\vmStatusClientes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\vwBonificaciones.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ZeImpresionZebraMuestra.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ZeImprimeAbonoEnvaseAVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ZeImprimeDevolucionRVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ZeImprimeEntregaRVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ZeImprimePagoARPVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ZeImprimeResumenAPVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ZeImprimeResumenRVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ZeImprimeVentaAPVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VistaModelo\ZeImprimeVisitaAPVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\CardViewTemplate.xaml.cs">
+      <DependentUpon>CardViewTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmAbonoEnvase.xaml.cs">
+      <DependentUpon>frmAbonoEnvase.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmActualizacionDatosClientes.xaml.cs">
+      <DependentUpon>frmActualizacionDatosClientes.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmBuscarCliente.xaml.cs">
+      <DependentUpon>frmBuscarCliente.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmCapturaEnvase.xaml.cs">
+      <DependentUpon>frmCapturaEnvase.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmCensoClientesComp.xaml.cs">
+      <DependentUpon>frmCensoClientesComp.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\FrmClientesRequisitos.xaml.cs">
+      <DependentUpon>FrmClientesRequisitos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmClientesSurtir.xaml.cs">
+      <DependentUpon>frmClientesSurtir.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmCobranza.xaml.cs">
+      <DependentUpon>frmCobranza.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmCobranzaBonificacion.xaml.cs">
+      <DependentUpon>frmCobranzaBonificacion.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmCobranzaCheque.xaml.cs">
+      <DependentUpon>frmCobranzaCheque.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmCobranzaEfectivo.xaml.cs">
+      <DependentUpon>frmCobranzaEfectivo.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmCobranzaPagos.xaml.cs">
+      <DependentUpon>frmCobranzaPagos.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmCobranzaTarjeta.xaml.cs">
+      <DependentUpon>frmCobranzaTarjeta.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmCobranzaTransferencia.xaml.cs">
+      <DependentUpon>frmCobranzaTransferencia.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmConsultaDocumentos.xaml.cs">
+      <DependentUpon>frmConsultaDocumentos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmDatosCliente.xaml.cs">
+      <DependentUpon>frmDatosCliente.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmDevolucionAutoventa.xaml.cs">
+      <DependentUpon>frmDevolucionAutoventa.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmDevolucionAutoventaDocto.xaml.cs">
+      <DependentUpon>frmDevolucionAutoventaDocto.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmDevolucionReparto.xaml.cs">
+      <DependentUpon>frmDevolucionReparto.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmEncuestas.xaml.cs">
+      <DependentUpon>frmEncuestas.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmEnvaseSugerido.xaml.cs">
+      <DependentUpon>frmEnvaseSugerido.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmEstatusCliente.xaml.cs">
+      <DependentUpon>frmEstatusCliente.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmExportarDB.xaml.cs">
+      <DependentUpon>frmExportarDB.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\FrmFinTurno.xaml.cs">
+      <DependentUpon>FrmFinTurno.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmGoogleMapsCliente.xaml.cs">
+      <DependentUpon>frmGoogleMapsCliente.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\FrmInicioTurno.xaml.cs">
+      <DependentUpon>FrmInicioTurno.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmLogin.xaml.cs">
+      <DependentUpon>frmLogin.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmMenuAutoventa.xaml.cs">
+      <DependentUpon>frmMenuAutoventa.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmMenuPreventa.xaml.cs">
+      <DependentUpon>frmMenuPreventa.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmMenuPrincipal.xaml.cs">
+      <DependentUpon>frmMenuPrincipal.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmMenuReparto.xaml.cs">
+      <DependentUpon>frmMenuReparto.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmMenuUtilerias.xaml.cs">
+      <DependentUpon>frmMenuUtilerias.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmMostrarPedido.xaml.cs">
+      <DependentUpon>frmMostrarPedido.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\FrmNoVenta.xaml.cs">
+      <DependentUpon>FrmNoVenta.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\FrmPedidoSugerido.xaml.cs">
+      <DependentUpon>FrmPedidoSugerido.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmPrevio.xaml.cs">
+      <DependentUpon>frmPrevio.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmPrevioPromociones.xaml.cs">
+      <DependentUpon>frmPrevioPromociones.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmPromociones.xaml.cs">
+      <DependentUpon>frmPromociones.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmQuejasSugerencias.xaml.cs">
+      <DependentUpon>frmQuejasSugerencias.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\FrmRecepcion.xaml.cs">
+      <DependentUpon>FrmRecepcion.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\FrmRecepcionParcial.xaml.cs">
+      <DependentUpon>FrmRecepcionParcial.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmRegistroTelefono.xaml.cs">
+      <DependentUpon>frmRegistroTelefono.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmRelacionAnticipo.xaml.cs">
+      <DependentUpon>frmRelacionAnticipo.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmReporteActivosDatos.xaml.cs">
+      <DependentUpon>frmReporteActivosDatos.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmReporteCuotaDia.xaml.cs">
+      <DependentUpon>frmReporteCuotaDia.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmReporteKpis.xaml.cs">
+      <DependentUpon>frmReporteKpis.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmReporteVolumenVenta.xaml.cs">
+      <DependentUpon>frmReporteVolumenVenta.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmResumenAbonoEnvase.xaml.cs">
+      <DependentUpon>frmResumenAbonoEnvase.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmResumenAR.xaml.cs">
+      <DependentUpon>frmResumenAR.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmResumenAutoVenta.xaml.cs">
+      <DependentUpon>frmResumenAutoVenta.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmResumenClientesRequisitos.xaml.cs">
+      <DependentUpon>frmResumenClientesRequisitos.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmResumenDia.xaml.cs">
+      <DependentUpon>frmResumenDia.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmResumenVenta.xaml.cs">
+      <DependentUpon>frmResumenVenta.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\FrmSeleccionImpresora.xaml.cs">
+      <DependentUpon>FrmSeleccionImpresora.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\FrmSeleccionPerfil.xaml.cs">
+      <DependentUpon>FrmSeleccionPerfil.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmTransmitirRest.xaml.cs">
+      <DependentUpon>frmTransmitirRest.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\frmUtilerias.xaml.cs">
+      <DependentUpon>frmUtilerias.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\FrmVentas.xaml.cs">
+      <DependentUpon>FrmVentas.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Vista\MdlGoogleMaps.xaml.cs">
+      <DependentUpon>MdlGoogleMaps.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmBuscarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmMenuAutoventa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmMenuPreventa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmMenuPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmMenuReparto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\FrmRecepcion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\FrmSeleccionPerfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmPromociones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmPrevioPromociones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\FrmFinTurno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\FrmInicioTurno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmCobranzaEfectivo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmCobranzaTarjeta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmCobranzaTransferencia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmPrevio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmResumenVenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmAbonoEnvase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmResumenAbonoEnvase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmCobranza.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\FrmVentas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmDevolucionReparto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmCobranzaBonificacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmCobranzaCheque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\MdlGoogleMaps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmResumenDia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmUtilerias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmDevolucionAutoventa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmEstatusCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmReporteCuotaDia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmMostrarPedido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\CardViewTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmReporteVolumenVenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmReporteActivosDatos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmReporteKpis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmQuejasSugerencias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmCapturaEnvase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmGoogleMapsCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\FrmPedidoSugerido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmTransmitirRest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmEncuestas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmResumenAutoVenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\FrmNoVenta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmMenuUtilerias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\FrmSeleccionImpresora.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmResumenAR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\FrmRecepcionParcial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmExportarDB.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmDatosCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmActualizacionDatosClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmCobranzaPagos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmEnvaseSugerido.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmClientesSurtir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmResumenClientesRequisitos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmCensoClientesComp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\FrmClientesRequisitos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmConsultaDocumentos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmRelacionAnticipo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmDevolucionAutoventaDocto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Vista\frmRegistroTelefono.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmBuscarCliente">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="90" />
+            <RowDefinition Height="115" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />            
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="BUSCAR CLIENTE" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+            <Entry Text="Cliente:" Grid.Row="1" Grid.Column="0" IsEnabled="False" FontAttributes="Bold" TextColor="Black" />
+            <Entry x:Name="txtIdCliente" Keyboard="Numeric" Grid.Row="1" Grid.Column="1"/>
+            <Button x:Name="btnBuscar" Text="Mostrar" Grid.Row="1" Grid.Column="2" Clicked="MostarDatos"/>
+
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="ID:" Grid.Row="0" Grid.Column="0"/>
+            <!--<Label x:Name="txtId" Text="" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>-->
+            <Label x:Name="txtId" Text="" Grid.Row="0" Grid.Column="1"/>
+
+            <Label x:Name="txtPagare" Text="PAGARE" Font="Bold,20" Grid.Row="0" Grid.Column="2"/>
+
+            <Label Text="Nombre:" Grid.Row="1" Grid.Column="0"/>
+            <Label x:Name="txtNombre" Text="" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+            <Label Text="Negocio:" Grid.Row="2" Grid.Column="0"/>
+            <Label x:Name="txtNegocio" Text="" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Cooler en Imp:" Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="txtImpacto" Text="" Grid.Row="0" Grid.Column="1" />
+
+            <Label Text="Cl.foco:" Grid.Row="0" Grid.Column="2"/>
+            <Label x:Name="txtCteFoco" Text="" Grid.Row="0" Grid.Column="3"/>
+
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="35" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Saldo:" Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="txtSaldo" Text="" Grid.Row="0" Grid.Column="1" />
+
+            <Label Text="Límite Venta:" Grid.Row="0" Grid.Column="2"/>
+            <Label x:Name="txtLimitVta" Text="" Grid.Row="0" Grid.Column="3" />
+
+            <Label Text="Crédito:" Grid.Row="1" Grid.Column="0"/>
+            <Label x:Name="txtCredito" Text="" Grid.Row="1" Grid.Column="1" />
+
+            <Label Text="Cheque:" Grid.Row="1" Grid.Column="2"/>
+            <Label x:Name="txtCheque" Text="" Grid.Row="1" Grid.Column="3"/>
+
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+          <!--  <Label Text="Ubicación:" Grid.Row="0" Grid.Column="0"/> -->
+            <Button Image="ic_google_maps" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Clicked="OnClickVerMapaCliente"  VerticalOptions="Center" WidthRequest="50" HeightRequest="50" BorderRadius="25" />
+          <!--  <Label Text="Activos Comodatados:" Grid.Row="0" Grid.Column="2"/> -->
+            <Button Image="ic_report" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Clicked="OnClickActivoComodatados"  VerticalOptions="Center" WidthRequest="50" HeightRequest="50" BorderRadius="25" />
+            <Button Image="ic_edit_map" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" Clicked="OnClickEditarUbicacion"  VerticalOptions="Center" WidthRequest="50" HeightRequest="50" BorderRadius="25" />
+            <Button Image="ic_online_store" Grid.Row="0" Grid.Column="3" HorizontalOptions="Center" Clicked="OnClickDatosCliente"  VerticalOptions="Center" WidthRequest="50" HeightRequest="50" BorderRadius="25" />
+            
+        </Grid>
+        
+        <!--grid para uso del desarrollador-->
+      <!--  <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Activos Comodatados:" Grid.Row="0" Grid.Column="0"/>
+            <Button Image="ic_person_pin_circle" Text="Activos Comodatados" Grid.Row="0" Grid.Column="1" Clicked="OnClickVerMapaCliente" WidthRequest="40" HeightRequest="40" BorderRadius="20" />
+        
+        </Grid>        -->
+        
+        <!--grid para uso del desarrollador-->
+
+
+
+        <Button Text = "Regresar" Grid.Row="6" Grid.Column="0" Clicked="OnClickedRegresar" />
+        <Button Text = "Avanzar" Grid.Row="6" Grid.Column="2" Clicked="OnClickedAvanzar"/>
+
+    </Grid>
+</ContentPage>

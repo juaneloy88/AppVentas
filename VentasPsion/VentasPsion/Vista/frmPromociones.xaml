@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmPromociones">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="90" />            
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="txtRuta" Text="" Grid.Row="0" Grid.Column="0" />
+        <Label Text="version 1.0" Grid.Row="0" Grid.Column="2" />
+
+        <!--grid para Título-->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Promociones" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+
+        </Grid>
+        <!--grid para Título-->
+
+        <TableView Intent="Settings" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <TableRoot>
+                <TableSection>
+
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Label Text="Cantidad:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="lblCantidad" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Stepper Grid.Row="0" Grid.Column="2" x:Name="stepper" Value ="1" Maximum="9999" Minimum="1" Increment ="1" ValueChanged="OnStepperValueChanged" HorizontalOptions="Center"/>
+
+                        </Grid>
+                    </ViewCell>
+
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Picker x:Name="pckPromociones" Title = "seleccione una promoción" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand" SelectedIndexChanged="pckPromociones_SelectedIndexChanged"/>
+
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+        <!--grid para ListView-->
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />                
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="lsvCodigosVenta" Grid.Row="0" Grid.Column="0" HasUnevenRows="false" Header="Header Value" ItemSelected="OnSelectionVenta">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="Blue">
+                            <Label Text="Clav" FontSize="Small" FontAttributes="Bold" TextColor="White" WidthRequest="40"/>
+                            <Label Text="Desc" FontSize="Small" FontAttributes="Bold" TextColor="White" WidthRequest="140"/>
+                            <Label Text="Venta" FontSize="Small" FontAttributes="Bold" TextColor="White" WidthRequest="50" HorizontalTextAlignment="End"/>
+                            <Label Text="Limite" FontSize="Small" FontAttributes="Bold" TextColor="White" WidthRequest="40"/>                            
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text ="{Binding arc_clave_venta}" FontSize="Small" WidthRequest="40"/>
+                                <Label Text ="{Binding ard_corta_vta}" FontSize="Small" WidthRequest="140"/>
+                                <Label Text ="{Binding arn_venta}" FontSize="Small" WidthRequest="50" HorizontalTextAlignment="End"/>
+                                <Label Text ="{Binding arn_cantidad_venta}" FontSize="Small" WidthRequest="40" HorizontalTextAlignment="End"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>            
+
+        </Grid>
+        <!--grid para ListView-->
+
+        <!--grid para ListView-->
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />                
+            </Grid.ColumnDefinitions>            
+
+            <ListView x:Name="lsvCodigosRegalo" Grid.Row="0" Grid.Column="0" HasUnevenRows="False"  Header="Header Value" ItemSelected="OnSelectionRegalo">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="Blue">
+                            <Label Text="Clav" FontSize="Small" FontAttributes="Bold" TextColor="White" WidthRequest="40"/>
+                            <Label Text="Desc" FontSize="Small" FontAttributes="Bold" TextColor="White" WidthRequest="140"/>
+                            <Label Text="Obseq" FontSize="Small" FontAttributes="Bold" TextColor="White" WidthRequest="50" HorizontalTextAlignment="End"/>
+                            <Label Text="Limite" FontSize="Small" FontAttributes="Bold" TextColor="White" WidthRequest="40"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text ="{Binding arc_clave_regalo}" FontSize="Small" WidthRequest="40"/>
+                                <Label Text ="{Binding ard_corta_regalo}" FontSize="Small" WidthRequest="140"/>
+                                <Label Text ="{Binding arn_regalo}" FontSize="Small" WidthRequest="50" HorizontalTextAlignment="End"/>
+                                <Label Text ="{Binding arn_cantidad_regalo}" FontSize="Small" WidthRequest="40" HorizontalTextAlignment="End"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <!--grid para ListView-->
+
+        <Button Text = "Regresar" Grid.Row="5" Grid.Column="0"  Clicked="OnClickedRegresar" />
+        <Button Text = "Aceptar" Grid.Row="5" Grid.Column="2" Clicked="btnPrevio"/>     
+
+    </Grid>
+</ContentPage>

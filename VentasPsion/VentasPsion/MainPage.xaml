@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:VentasPsion"
+             x:Class="VentasPsion.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="350" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Text="Ruta " Grid.Row="0" Grid.Column="0" />
+        <Label Text="version" Grid.Row="0" Grid.Column="2" />
+
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+
+            <Button Text="Analisis " Clicked="OnButtonClicked" Grid.Row="0" Grid.Column="0" />
+            <Button Text="Menu " Clicked="OnButtonClicked1" Grid.Row="1" Grid.Column="0" />
+      
+            
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <Button Text = "Regresar" Grid.Row="2" Grid.Column="0"  />
+
+        <Button Text = "Avanzar" Grid.Row="2" Grid.Column="2"  />
+   
+    </Grid>
+</ContentPage>

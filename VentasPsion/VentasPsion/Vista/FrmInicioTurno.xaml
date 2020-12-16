@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.FrmInicioTurno">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <Label Text="INICIO DE TURNO" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand"  Grid.Row="0" Grid.Column="1">
+                <Label Text="&#xf073;" FontFamily="FontAwesome"  YAlign="Center" HorizontalOptions="Start" FontSize="Medium" />
+                <Label Text="FECHA:" FontSize="Medium" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+            <Label x:Name="lblFecha" Text="" FontSize="Medium" VerticalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" Grid.Row="0" Grid.Column="2" ></Label>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand"   Grid.Row="1" Grid.Column="1">
+                <Label Text="&#xf017;" FontFamily="FontAwesome"  YAlign="Center" HorizontalOptions="Start" FontSize="Medium" />
+                <Label Text="HORA:" FontSize="Medium" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+            <Label x:Name="lblHora" Text="" FontSize="Medium" VerticalTextAlignment="Center"  TextColor="Black" FontAttributes="Bold" Grid.Row="1" Grid.Column="2"></Label>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand"   Grid.Row="2" Grid.Column="1">
+                <Label Text="&#xf0d1;" FontFamily="FontAwesome"  YAlign="Center" HorizontalOptions="Start" FontSize="Medium" />
+                <Label Text="UNIDAD:" FontSize="Medium" VerticalTextAlignment="Center" ></Label>
+            </StackLayout>
+            <Entry x:Name="entUnidad" Placeholder="Capture la unidad" Text="" Keyboard="Numeric" Grid.Row="2" Grid.Column="2"></Entry>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand"  Grid.Row="3" Grid.Column="1">
+                <Label Text="&#xf0e4;" FontFamily="FontAwesome"  YAlign="Center" HorizontalOptions="Start" FontSize="Medium" />
+                <Label Text="KILOMETRAJE:" FontSize="Medium" VerticalTextAlignment="Center"></Label>
+            </StackLayout>
+
+            
+            <Entry x:Name="entKilometraje" Placeholder="Capture el kilometraje" Text="" Keyboard="Numeric" Grid.Row="3" Grid.Column="2"></Entry>
+            <Button x:Name="btnGuardar" Text="Guardar" Clicked="OnClickedGuardar" Grid.Row="4" Grid.Column="2" Image="ic_save.png"  />
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <Button x:Name="BtnRegresar" Text="Regresar" Clicked="OnClickedRegresar" Grid.Row="3" Grid.Column="0"  />
+        <!--<Button Text = "Avanzar" Grid.Row="3" Grid.Column="2"  />-->
+    </Grid>
+
+</ContentPage>

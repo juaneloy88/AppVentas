@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmConsultaDocumentos">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="120" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <Label Text="Consulta de documentos" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Documentos Activos:" FontSize ="Small" VerticalTextAlignment="End" Grid.Row="0" Grid.Column="1" />
+            <Picker x:Name="pckDocumentos" Title = "Seleccione documento" SelectedIndexChanged="pckDocumentos_SelectedIndexChanged" VerticalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="1" />
+        </Grid>
+
+        <TableView Intent="Settings" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <TableRoot>
+                <TableSection>
+                    <ViewCell  Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Cliente:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtCliente" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Ruta:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtruta" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Ticket:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtticket" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Fecha:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtdMov" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Importe:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtImporte" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Saldo:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtSaldo" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+        <Button Text ="Regresar" Grid.Row="4" Grid.Column="0" Clicked="OnClickedRegresar"/>
+    </Grid>
+</ContentPage>

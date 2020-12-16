@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmDevolucionReparto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <Label Text="DEVOLUCIONES" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+        
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <!--<Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+            
+            <Label Text="CLIENTE:" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1"></Label>
+            <Label x:Name="lblClienteDevol" Text="XXX - XXX" FontSize="Medium" VerticalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" Grid.Row="2" Grid.Column="1" ></Label>
+            <Label Text="MOTIVO DE DEVOLUCION:"  FontSize ="Medium" VerticalTextAlignment="End" Grid.Row="4" Grid.Column="1" />
+            <Picker x:Name="pckMotDevoluciones" Title = "Seleccione el Motivo de Devolución" VerticalOptions="CenterAndExpand" Grid.Row="5" Grid.Column="1" />
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <Button Text = "Regresar" Grid.Row="3" Grid.Column="0"  Clicked="OnClickedRegresar" />
+        <Button Text = "Aceptar" Grid.Row="3" Grid.Column="2"  Clicked="OnClickedAceptar"/>
+
+    </Grid>
+
+</ContentPage>

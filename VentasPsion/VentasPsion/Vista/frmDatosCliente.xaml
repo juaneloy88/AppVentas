@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmDatosCliente">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" />
+
+        <Label Text="Datos del Cliente" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"/>
+
+        <TableView Intent="Settings" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <TableRoot>
+                <TableSection>
+
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Clave:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtClave" Text="{Binding cln_clave}" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>                                
+                            </Grid.RowDefinitions>
+                            <Label Text="Nombre Comercial:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtNombreComercial" Text="{Binding clc_nombre_comercial}" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>                            
+                        </Grid>
+                    </ViewCell>
+
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Nombre:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtNombre" Text="{Binding clc_nombre}" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+
+
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Domicilio:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtDomicilio" Text="{Binding clc_domicilio}" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Código Postal:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtCP" Text="{Binding clc_domicilio}" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+
+
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="RFC:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtRfc" Text="{Binding clc_rfc}" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Domicilio Cliente:" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtDomicilioCliente" Text="{Binding domiciliocliente}" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Telefonos " Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Picker x:Name="pckTelefonos" Title = "Seleccione Numero" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1" SelectedIndexChanged="SelectedIndexChanged"/>
+                        </Grid>
+                    </ViewCell>
+                    
+
+                    
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+        <Button Text = "Regresar" Grid.Row="3" Grid.Column="0"  Clicked="OnClickedRegresar" />
+        <Button Text = "Mas" Grid.Row="3" Grid.Column="2"  Clicked="OnClickedMas" x:Name="btnMas" />
+    </Grid>
+</ContentPage>

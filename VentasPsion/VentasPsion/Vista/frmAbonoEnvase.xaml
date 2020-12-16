@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmAbonoEnvase">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <Label Text="ABONO DE ENVASE" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="ID CLIENTE:" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1"></Label>
+            <Entry x:Name="entIdCliente" Placeholder="Capture el ID del cliente" Text="" Keyboard="Numeric" Grid.Row="0" Grid.Column="2"></Entry>
+            <Button x:Name="btnBuscarCliente" Text="Buscar" Clicked="OnClickedBuscar" Grid.Row="1" Grid.Column="1"  />
+            <Label x:Name="lblNombreCliente" Text="" FontSize="Medium" VerticalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" Grid.Row="1" Grid.Column="2" ></Label>
+            <Label x:Name="lblNegocioCliente" Text="" FontSize="Medium" VerticalTextAlignment="Center" TextColor="Black" FontAttributes="Bold" Grid.Row="2" Grid.Column="2" ></Label>
+            <Label Text="TIPO ENVASE:" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="3" Grid.Column="1"></Label>
+            <Picker x:Name="pkrEnvases" Title="Seleccione tipo de envase" SelectedIndexChanged="pkrEnvases_SelectedIndexChanged" VerticalOptions="CenterAndExpand" Grid.Row="3" Grid.Column="2"></Picker>
+            <Label Text="CANTIDAD:" FontSize="Medium" VerticalTextAlignment="Center" Grid.Row="4" Grid.Column="1"></Label>
+            <Entry x:Name="entCantidadEnvase" Placeholder="Capture cantidad a abonar" Text="" Keyboard="Numeric" Grid.Row="4" Grid.Column="2"></Entry>
+            <Button x:Name="btnGuardar" Text="Guardar" Clicked="OnClickedGuardar" Grid.Row="5" Grid.Column="2" Image="ic_save.png" />
+
+            <Button x:Name="btnVerResumen" Text="Ver Resumen" Clicked="OnClickedVerResumen" Grid.Row="7" Grid.Column="2"  />
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <Button x:Name="btnRegresar" Text="Regresar" Clicked="OnClickedRegresar" Grid.Row="3" Grid.Column="0"  />
+    </Grid>
+</ContentPage>

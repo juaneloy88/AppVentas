@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmReporteActivosDatos"
+             Title="ACTIVOS COMODATADOS">
+
+    <ContentPage.ToolbarItems>
+
+
+    </ContentPage.ToolbarItems>
+
+
+    <StackLayout Orientation="Vertical">
+        <!--<Label Text="Xamarin Forms CardView Demo"
+               VerticalOptions="Start"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               BackgroundColor="Transparent"
+               HorizontalOptions="CenterAndExpand" /> -->
+        <SearchBar Placeholder="Buscar..." TextChanged="SearchBar_OnBuscarActivosDatos" x:Name="oTxtBuscador"></SearchBar>
+        <ListView x:Name="listViewActivosDatos" SelectedItem="{Binding SelcetedItem,Mode=TwoWay}" RowHeight="100"  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <!-- ********************************************* -->
+
+                        <Frame IsClippedToBounds="True"
+         HasShadow="True"
+         BackgroundColor="White" >
+                            <Frame.OutlineColor>
+                                <OnPlatform x:TypeArguments="Color"
+                  Android="Gray"
+                  iOS="Gray"/>
+                            </Frame.OutlineColor>
+                            <Frame.Margin>
+                                <OnPlatform x:TypeArguments="Thickness"
+                  Android="10" iOS="10"/>
+                            </Frame.Margin>
+                            <Frame.Padding>
+                                <OnPlatform x:TypeArguments="Thickness"
+                  Android="0" iOS="0"/>
+                            </Frame.Padding>
+                            <StackLayout Orientation="Horizontal">
+                                <BoxView Color="Yellow" WidthRequest="4"/>
+                                <Grid VerticalOptions="CenterAndExpand"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="Transparent">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label FontAttributes="Bold"
+               Grid.Row="0"
+               HorizontalTextAlignment="Start"
+               VerticalTextAlignment="Center"
+               FontSize="16"
+               Text="{Binding cln_clave, Mode = TwoWay}">
+                                        <Label.LineBreakMode>
+                                            <OnPlatform x:TypeArguments="LineBreakMode"
+                        Android="NoWrap" iOS="TailTruncation"/>
+                                        </Label.LineBreakMode>
+                                    </Label>
+                                    <BoxView Grid.Row="1" Color="Gray"
+                 HorizontalOptions="FillAndExpand"
+                 HeightRequest="1"/>
+                                    <Grid Grid.Row="2"
+              BackgroundColor="Transparent"
+              Padding="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Row="0"
+                 Grid.Column="0"
+                 Text="Cantidad:"/>
+                                        <Label Grid.Row="0"
+                 Grid.Column="1"
+                 Text="{Binding acn_cantidad, Mode = TwoWay}"/>
+                                    </Grid>
+                                    <!-- -->
+                                    <Grid Grid.Row="3"
+              BackgroundColor="Transparent"
+              Padding="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Row="0"
+                 Grid.Column="0"
+                 Text="Descripción:"/>
+                                        <Label Grid.Row="0"
+                 Grid.Column="1"
+                 Text="{Binding acc_descripcion, Mode = TwoWay}"/>
+                                    </Grid>
+                                    <!-- -->
+                                  
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+
+                        <!-- ********************************************* -->
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

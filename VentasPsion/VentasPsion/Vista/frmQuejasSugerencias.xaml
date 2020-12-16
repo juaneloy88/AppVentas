@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmQuejasSugerencias"
+             Title="Quejas y Sugerencias">
+
+    <ContentPage.ToolbarItems>
+        <!--<ToolbarItem Text="App Corona Ags" /> -->
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand"  Margin="5">
+            <Label Text="Cliente:"/>
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+                <Entry Grid.Column="0"  x:Name="txtClaveCliente" Keyboard="Numeric"  />
+                <Button Grid.Column="1" Text="&#xf002;" Clicked="OnClickedBuscarCliente"/>
+            </Grid>
+
+            <Label Text="Departamento:" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                   
+                </Grid.ColumnDefinitions>
+                <Picker x:Name="oPickerDepartamento" Title="Departamento..." HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Picker>
+                <!-- <Entry Grid.Column="0"  x:Name="txtDepartamento" Keyboard="Text"    />
+                <Button Grid.Column="1" Text="&#xf002;"  Clicked="OnClickedBuscarCliente"/> -->
+            </Grid>
+
+            <Label Text="Solicitud o Queja:" />
+            <!--<Editor x:Name="txtSolicituQueja"></Editor> -->
+            <Editor HeightRequest="150"  x:Name="txtSolicituQueja" >
+            </Editor>
+            <Button x:Name="btnGuardarSolicitud" ContentLayout="left,0" Text="Enviar"  HorizontalOptions="FillAndExpand"  Clicked="OnClickedGuardarSolicitud"/>
+            <Button ContentLayout="left,0" Text="Regresar"  HorizontalOptions="FillAndExpand"  Clicked="OnClickedRegresar"/>
+ 
+            <Label x:Name="messageLabel"  />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

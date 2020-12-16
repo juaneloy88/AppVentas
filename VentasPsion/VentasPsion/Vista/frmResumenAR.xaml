@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmResumenAR">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="txtRuta" Text="" Grid.Row="0" Grid.Column="0" />
+        <Label Text="version 1.0" Grid.Row="0" Grid.Column="2" />
+
+        <Label Text="RESUMEN" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Medium"/>
+
+        <TableView Intent="Settings" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <TableRoot>
+                <TableSection>
+
+                    <ViewCell Height="20">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Total Efectivo: " Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtEfectivo" Grid.Row="0" Grid.Column="2" FontSize="Small" VerticalTextAlignment="End" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+
+                    <ViewCell Height="20">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Total Cheques: " Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtCheque" Grid.Row="0" Grid.Column="2" FontSize="Small" VerticalTextAlignment="End" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+
+                    <ViewCell Height="20">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Total Tarjeta: " Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtTarjeta" Grid.Row="0" Grid.Column="2" FontSize="Small" VerticalTextAlignment="End" Margin="5"/>                            
+                        </Grid>
+                    </ViewCell>
+
+                    <ViewCell Height="20">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Total Transferencia: " Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtTransferencia" Grid.Row="0" Grid.Column="2" FontSize="Small" VerticalTextAlignment="End" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+
+                    <ViewCell Height="20">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Total: " Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label x:Name="txtTotal" Grid.Row="0" Grid.Column="2" FontSize="Small" VerticalTextAlignment="End" Margin="5"/>
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+        <!--grid para ListView para el Envase-->
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="lsvEnvase" Grid.Row="0" Grid.Column="0" HasUnevenRows="false" Header="Header Value">
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                            <Label Text="Envase" FontSize="Small" FontAttributes="Bold" WidthRequest="50"></Label>
+                            <Label Text="SIni" FontSize="Small" FontAttributes="Bold" WidthRequest="42" HorizontalTextAlignment="End"></Label>
+                            <Label Text="Cargo" FontSize="Small" FontAttributes="Bold" WidthRequest="42" HorizontalTextAlignment="End"></Label>
+                            <Label Text="Abono" FontSize="Small" FontAttributes="Bold" WidthRequest="42" HorizontalTextAlignment="End"></Label>
+                            <Label Text="Vta" FontSize="Small" FontAttributes="Bold" WidthRequest="40" HorizontalTextAlignment="End"></Label>
+                            <Label Text="SFin" FontSize="Small" FontAttributes="Bold" WidthRequest="40" HorizontalTextAlignment="End"></Label>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding mec_envase}" FontSize="Small" WidthRequest="50"></Label>
+                                <Label Text="{Binding men_saldo_inicial}" FontSize="Small" WidthRequest="42" HorizontalTextAlignment="End"></Label>
+                                <Label Text="{Binding men_cargo}" FontSize="Small" WidthRequest="42" HorizontalTextAlignment="End" ></Label>
+                                <Label Text="{Binding men_abono}" FontSize="Small" WidthRequest="42" HorizontalTextAlignment="End" ></Label>
+                                <Label Text="{Binding men_venta}" FontSize="Small" WidthRequest="40" HorizontalTextAlignment="End" ></Label>
+                                <Label Text="{Binding men_saldo_final}" FontSize="Small" WidthRequest="40" HorizontalTextAlignment="End" ></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+        <!--grid para ListView para el Envase-->
+
+        <!--<Button Text = "Regresar" Grid.Row="3" Grid.Column="0"  Clicked="OnClickedRegresar" />
+        <Button Text = "Avanzar" Grid.Row="3" Grid.Column="2" Clicked="OnClickedCambiarUri" />-->
+
+        <Button Text = "Regresar" Grid.Row="4" Grid.Column="0" Clicked="OnClickedRegresar"/>
+        <Button x:Name="btnImprimir" Text = "Imprimir" Grid.Row="4" Grid.Column="1" Clicked="btnImprimir_Clicked"/>
+        <Button x:Name="btnAvanzar" Text = "Avanzar" Grid.Row="4" Grid.Column="2" Clicked="OnClickedAvanzar"/>
+
+    </Grid>
+</ContentPage>

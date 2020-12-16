@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmCobranzaTransferencia">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="400"  />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Text="Ruta " Grid.Row="0" Grid.Column="0" />
+        <Label Text="version" Grid.Row="0" Grid.Column="2" />
+
+
+
+        <!--grid para uso del desarrollador-->
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="COBRANZA"  Grid.ColumnSpan="4" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="0" Grid.Column="0" />
+            <Label x:Name="lblTitulo"  Grid.ColumnSpan="4" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="1" Grid.Column="0" />
+
+            <Label Text="CANTIDAD $:"  FontSize ="Medium" Grid.Row="5" Grid.Column="1" />
+            <Entry x:Name="txtCantidad"   Keyboard="Numeric"     Grid.Row="5" Grid.Column="2"   />
+
+            <Label Text="4 N° TRANSFERENCIA:"  FontSize ="Medium" Grid.Row="6" Grid.Column="1" />
+            <Entry x:Name="txtCuenta"   Keyboard="Numeric"     Grid.Row="6" Grid.Column="2"   />
+
+
+        </Grid>
+        <!--grid para uso del desarrollador-->
+
+        <Button Text = "Regresar" Grid.Row="2" Grid.Column="0"  Clicked="OnClickedRegresar" />
+
+        <Button Text = "Aceptar" Grid.Row="2" Grid.Column="2" Clicked="OnClickedAceptar"/>
+
+    </Grid>
+
+</ContentPage>

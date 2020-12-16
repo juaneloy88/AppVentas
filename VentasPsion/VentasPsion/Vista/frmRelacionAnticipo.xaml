@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmRelacionAnticipo">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="160" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <Label Text="Relacion Anticipos" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize="Large"/>
+
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="lblDocumentos" Text="Documentos Activos:" FontSize ="Small" VerticalTextAlignment="End" Grid.Row="0" Grid.Column="1" />
+            <Picker x:Name="pckDocumentos" Title = "Seleccione Documento" SelectedIndexChanged="pckDocumentos_SelectedIndexChanged" VerticalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="1" />
+
+            <Label Text="Anticipos:" FontSize ="Small" VerticalTextAlignment="End" Grid.Row="2" Grid.Column="1" />
+            <Picker x:Name="pckAnticipos" Title = "Seleccione Anticipo" SelectedIndexChanged="pckAnticipos_SelectedIndexChanged" VerticalOptions="CenterAndExpand" Grid.Row="3" Grid.Column="1" />
+            
+        </Grid>
+
+
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />                
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+            <Button Text ="Regresar" Grid.Row="0" Grid.Column="0" Clicked="OnClickedRegresar"/>            
+            <Button Text ="Guardar" Grid.Row="0" Grid.Column="3" Clicked="OnClickedGuardar"/>
+        </Grid>       
+            
+    </Grid>
+</ContentPage>

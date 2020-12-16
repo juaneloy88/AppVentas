@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmDevolucionAutoventaDocto">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <TableView Intent="Settings" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HasUnevenRows="True" >
+            <TableRoot>
+                <TableSection Title="Devolucion Documentos">
+                    <ViewCell Height="65">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label Text="Nombre del cliente:" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center"/>
+                            <Entry x:Name="txtNombre" Grid.Row="1" Grid.Column="1" Keyboard="Text" Grid.ColumnSpan="3" FontSize="Small" IsEnabled="False"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="65">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Folio Ticket:" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center"/>
+                            <Entry x:Name="txtFolio" Grid.Row="1" Grid.Column="1" Keyboard="Numeric"  Grid.ColumnSpan="3" FontSize="Small"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="65">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Buscar" Grid.Row="1" Grid.Column="2" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+                            <Button Image="ic_preview"  Grid.Row="1" Grid.Column="3" HorizontalOptions="Start" Clicked="OnClickedBuscar"  VerticalOptions="Center" WidthRequest="50" HeightRequest="50" BorderRadius="25" />
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="45">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label x:Name="lblEstatus"  Grid.Row="0" Grid.Column="2" FontSize="Small" VerticalTextAlignment="Center"/>
+                            <!--<Label x:Name="lblEstatus" Grid.Row="0" Grid.Column="1" FontSize="Small" VerticalTextAlignment="Center"/>-->
+                            <Picker x:Name="pckTickets"   SelectedIndexChanged="OnClickedDetalle" Title = "Seleccione el ticket" VerticalOptions="CenterAndExpand"  Grid.Row="0" Grid.Column="1" HorizontalOptions="End"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell Height="65">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Detalle Articulos" Grid.Row="1" Grid.Column="2" FontSize="Small" VerticalTextAlignment="Center"/>
+                            <!--<Button Image="ic_stroller"  Grid.Row="1" Grid.Column="3" HorizontalOptions="End" Clicked="OnClickedDetalle"  VerticalOptions="Center" WidthRequest="50" HeightRequest="50" BorderRadius="25" />-->
+                            <Picker x:Name="pckDetalle" Title = "Mostrar Detalle" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="3" />
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+                <TableSection >
+                    <ViewCell Height="80">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="15"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="45"/>
+                            </Grid.RowDefinitions>
+                            <Button Text = "Regresar" Grid.Row="1" Grid.Column="1" Clicked="OnClickedRegresar"  />
+                            <Button Text = "Guardar" Grid.Row="1" Grid.Column="3" Clicked="OnClickedDevolver" HorizontalOptions="End"  />
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </Grid>
+
+
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="400" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+
+
+        --><!--grid para uso del desarrollador--><!--
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="20" />
+
+                <RowDefinition Height="40" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="35" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="DEVOLUCION"  Grid.ColumnSpan="4" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="0" Grid.Column="0" />
+            <Label Text="DOCUMENTOS"  Grid.ColumnSpan="4" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"  Grid.Row="1" Grid.Column="0" />
+
+            <Label Text="Folio Ticket"      Grid.Row="3" Grid.Column="1" FontSize ="Medium"/>
+            <Entry x:Name="txtCantidad"     Grid.Row="3" Grid.Column="2" Keyboard="Numeric"    />
+
+            <Button Text = "Buscar"         Grid.Row="5" Grid.Column="2" Clicked="OnClickedBuscar"/>
+
+            <Label x:Name="lblEstatus"      Grid.Row="7" Grid.Column="2" Text = "estatus" FontSize ="Medium" />
+
+            <Button Text = "Ver Articulos"  Grid.Row="8" Grid.Column="2" Clicked="OnClickedDetalle"/>
+
+        </Grid>
+        --><!--grid para uso del desarrollador--><!--
+
+        <Button Text = "Regresar" Grid.Row="2" Grid.Column="0"  Clicked="OnClickedRegresar" />
+
+        <Button Text = "Terminar" Grid.Row="2" Grid.Column="2"  Clicked="OnClickedDevolver"/>
+
+    </Grid>-->
+</ContentPage>

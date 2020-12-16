@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.FrmSeleccionPerfil" 
+             Title="PERFILES">
+    <!--
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblRutaPlusTipoVenta" Text="" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start"/>
+        <Label x:Name="lblFechaVenta" Text="" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+        <Label x:Name="lblVersionApp" Text="" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" />
+
+        <Label Text="SELECCIÓN DE PERFIL" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Start" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+
+
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnPreventa" Clicked="OnClickedPreventa" Text = "Preventa" Grid.Row="1" Grid.Column="1"></Button>
+            <Button x:Name="btnReparto" Clicked="OnClickedReparto" Text = "Reparto" Grid.Row="2" Grid.Column="1"></Button>
+            <Button x:Name="btnAutoventa" Clicked="OnClickedAutoventa" Text = "Autoventa" Grid.Row="3" Grid.Column="1"></Button>
+        </Grid>
+
+
+        <Button Text="Salir" Clicked="OnClickedSalir" Grid.Row="3" Grid.Column="1"  />
+    </Grid>
+-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salir"  Clicked="OnClickedSalir"  Order="Default" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+        <ListView x:Name="listViewPerfil" CachingStrategy="RecycleElement" HasUnevenRows="True" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="60" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Button BackgroundColor="Transparent" Grid.Column="0" HorizontalOptions="Start" Image="{Binding Icon}"  Margin="5"/>
+                            <Label x:Name="idLabel" Grid.Column="1" Text="{Binding NombrePerfil}" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label Text="&#xf105;" Grid.Column="2"  FontSize="20" FontFamily="FontAwesome" HorizontalTextAlignment="End" Margin="10"/>
+                            
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+
+    </ContentPage.Content>
+
+
+
+</ContentPage>

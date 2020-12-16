@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmLogin"
+             Title="LOGIN" >
+    <!--  <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Label Text="Ruta 1050" Grid.Row="0" Grid.Column="0" />
+        <Label Text="version 1.0" Grid.Row="0" Grid.Column="2" />
+
+
+
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Login" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+            <Entry Text="Usuario:" Grid.Row="1" Grid.Column="0" IsEnabled="False" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+            <Entry x:Name="txtUsuario" Keyboard="Numeric" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+            <Entry Text="Contraseña:" Grid.Row="2" Grid.Column="0" IsEnabled="False" FontAttributes="Bold" TextColor="Black" FontSize="Medium"/>
+            <Entry x:Name="txtContrasenia" Keyboard="Numeric" IsPassword="True" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+            <Button x:Name="btnBuscar" Text="Ingresar" Grid.Row="3" Grid.Column="2" Clicked="EjecutaLogin"/>
+
+        </Grid>
+       
+
+        <Button Text = "Regresar" Grid.Row="2" Grid.Column="0" />
+
+    </Grid>
+    -->
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="App Corona Ags" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout VerticalOptions="StartAndExpand"  Margin="5">
+        <Label x:Name="lblVersion" Text="Version 0.0.26" YAlign="Center" XAlign="End" HorizontalOptions="End" FontSize="Medium" FontAttributes="Bold"/>
+        <Label x:Name="lblLeyenda" Text="" YAlign="Center" XAlign="End" HorizontalOptions="End" FontSize="Medium" FontAttributes="Bold"/>
+        <Label x:Name="lblPerfil" Text="perfil"         YAlign="Center" XAlign="End" HorizontalOptions="Start" FontSize="Medium" FontAttributes="Bold"/>
+        <Image Source="logos.png"   HorizontalOptions="CenterAndExpand"  Margin="38"/>
+
+        <StackLayout Padding="2,10,15,10"  Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+            <Label Text="&#xf007;" FontFamily="FontAwesome"  YAlign="Center" HorizontalOptions="Start" FontSize="Medium" />
+            <Label Text="USUARIO:" YAlign="Center" XAlign="End" HorizontalOptions="End" FontSize="Medium" FontAttributes="Bold"/>
+        </StackLayout>
+        <Entry x:Name="txtUsuario"  Keyboard="Numeric"  />
+        <StackLayout Padding="2,10,15,10"  Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+            <Label Text="&#xf023;" FontFamily="FontAwesome"  YAlign="Center" HorizontalOptions="Start" FontSize="Medium" />
+            <Label Text="CONTRASEÑA:" YAlign="Center" XAlign="End" HorizontalOptions="End" FontSize="Medium" FontAttributes="Bold"/>
+        </StackLayout>
+        <Entry x:Name="txtContrasenia"  Keyboard="Numeric"  IsPassword="True"  />
+        <!-- <Button  Text="&#xf105;" Clicked="EjecutaLogin"  x:Name="btnBuscar" BackgroundColor="Red"  /> -->
+        <!--<Button Clicked="EjecutaLogin" Text="Ingresar"  Image="ic_checked" HorizontalOptions="FillAndExpand" FontSize="12" x:Name="btnBuscar" BackgroundColor="Red" /> -->
+        <Button  x:Name="btnBuscar" ContentLayout="left,0" Text="Ingresar" BackgroundColor="Red"  Image="ic_checked.png"  HorizontalOptions="FillAndExpand"  Clicked="EjecutaLogin"/>
+        <Label x:Name="messageLabel"  />
+    </StackLayout>
+
+
+</ContentPage>

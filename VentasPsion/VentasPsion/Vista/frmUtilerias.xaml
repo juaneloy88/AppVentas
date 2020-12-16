@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VentasPsion.Vista.frmUtilerias">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="txtPerfil" Text="" Grid.Row="0" Grid.Column="0" />
+
+        <Label Text="version 1.0" Grid.Row="0" Grid.Column="2" />
+
+        <Label Text="AJUSTES" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalOptions="Center"  HorizontalOptions="CenterAndExpand" FontSize = "Large"/>
+
+        <TableView Intent="Settings" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3">
+            <TableRoot>
+                <TableSection>
+
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Socket de Pruebas: " Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Switch x:Name="sSocketEnvio" Toggled ="OnClickSwitchToggledPruebas" Grid.Row="0" Grid.Column="2" HorizontalOptions="EndAndExpand"/>
+                        </Grid>
+                    </ViewCell>
+
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Visitar Todos los Clientes (Reparto): " Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Switch x:Name="sVistaClientesReparto" Toggled ="OnClickSwitchToggledClientes" Grid.Row="0" Grid.Column="2" HorizontalOptions="EndAndExpand" IsEnabled="False"/>
+                        </Grid>
+                    </ViewCell>
+
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="BD de Producción: " Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Switch x:Name="sTipoBD" Toggled ="OnClickSwitchToggledBD" Grid.Row="0" Grid.Column="2" HorizontalOptions="EndAndExpand"/>
+                        </Grid>
+                    </ViewCell>
+
+
+                    <ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Habilitar operaciones" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Switch x:Name="sValidarOperaciones" Toggled ="OnClickSwitchToggledOperaciones" Grid.Row="0" Grid.Column="2" HorizontalOptions="EndAndExpand"/>
+                        </Grid>
+                    </ViewCell>
+
+
+                    <!--<ViewCell Height="60">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Ajustar Ruta" Grid.Row="0" Grid.Column="0" FontSize="Small" VerticalTextAlignment="Center" Margin="5"/>
+                            <Entry x:Name="txtRuta" Grid.Row="0" Grid.Column="1" FontSize ="Medium" Keyboard="Numeric"  Placeholder="0" />
+                            <Switch x:Name="sAjustarRuta" Toggled ="OnClickSwitchToggledRuta" Grid.Row="0" Grid.Column="2" HorizontalOptions="EndAndExpand"/>
+                        </Grid>
+                    </ViewCell>-->
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+        <Button Text = "Regresar" Grid.Row="3" Grid.Column="0"  Clicked="OnClickedRegresar" />
+        <Button Text = "Avanzar" Grid.Row="3" Grid.Column="2" Clicked="OnClickedCambiarUri" />
+
+        </Grid>    
+
+</ContentPage>
